@@ -147,6 +147,8 @@ export default function Home() {
             <a href="#how" onClick={() => setIsNavOpen(false)}>How It Works</a>
             <a href="#portfolio" onClick={() => setIsNavOpen(false)}>Portfolio</a>
             <a href="#blog" onClick={() => setIsNavOpen(false)}>Blog</a>
+            <a href="#login" className="mobile-only" onClick={() => setIsNavOpen(false)}>Log in</a>
+            <a href="#join" className="btn nav__cta mobile-only" onClick={() => setIsNavOpen(false)}>Join as Cameraman</a>
           </nav>
           <div className="nav__right">
             <a href="#login" style={{fontFamily:'var(--body)', fontSize:'.92rem', color:'#fff', marginRight:'10px', whiteSpace:'nowrap'}}>Log in</a>
