@@ -175,9 +175,9 @@ export default function Home() {
             <div className="hero__copy">
               <span className="eyebrow">— GET THE MOMENT</span>
               <h1 className="hero__title">
-                Find the right<br/>
-                person to <span className="u-blue">capture</span><br/>
-                your moment.
+                <span className="line"><span>Find the right</span></span><br/>
+                <span className="line"><span>person to <span className="u-blue">capture</span></span></span><br/>
+                <span className="line"><span>your moment.</span></span>
               </h1>
               <p className="hero__sub">Discover talented photographers and videographers for weddings, parties, corporate events, celebrations, concerts and more.</p>
               <div className="hero__cta">
