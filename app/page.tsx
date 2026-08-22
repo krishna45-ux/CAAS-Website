@@ -11,7 +11,6 @@ export default function Home() {
   const [activeDay, setActiveDay] = useState('tue');
   const [isPreload, setIsPreload] = useState(false);
   const [parallaxY, setParallaxY] = useState(0);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   // Helper functions
   const pad = (n: number) => (n < 10 ? '0' : '') + n;
@@ -165,16 +164,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* VIDEO MODAL */}
-      <div className={`video-modal ${isVideoOpen ? 'is-open' : ''}`} onClick={() => setIsVideoOpen(false)}>
-        <div className="video-modal__inner" onClick={(e) => e.stopPropagation()}>
-          <button className="video-modal__close" onClick={() => setIsVideoOpen(false)} aria-label="Close video">&times;</button>
-          {isVideoOpen && (
-            <video className="video-modal__video" src="/Video/Hero_video.mp4" autoPlay controls controlsList="nodownload" />
-          )}
-        </div>
-      </div>
-
       <main id="top">
         {/* HERO */}
         <section className="hero">
@@ -214,19 +203,6 @@ export default function Home() {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                   </span>
                   <div><b>Secure & Reliable</b><p>Quality you can trust</p></div>
-                </div>
-              </div>
-              
-              <div className="hero__video-btn">
-                <svg className="video-arrow" viewBox="0 0 100 50" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M90 40 Q50 60 10 10 M10 10 L25 15 M10 10 L15 25"/>
-                </svg>
-                <button className="play-btn" aria-label="Play video" onClick={() => setIsVideoOpen(true)}>
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <div className="video-btn-txt" style={{ cursor: 'pointer' }} onClick={() => setIsVideoOpen(true)}>
-                  <b>See how it works</b>
-                  <span>Watch 1-min video</span>
                 </div>
               </div>
             </div>

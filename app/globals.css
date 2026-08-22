@@ -219,9 +219,9 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   box-shadow:0 24px 55px -22px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.09);
   margin-top:clamp(8px,1vw,12px);
 }
-.brand{display:flex;align-items:center;flex:1}
+.brand{display:flex;align-items:center;flex:none}
 .brand__logo{width:clamp(98px,11vw,125px);height:auto;display:block}
-.nav__links{display:flex;gap:clamp(12px,1.5vw,36px);margin-inline:auto;
+.nav__links{display:flex;gap:clamp(12px,1.5vw,36px);margin-left:0;margin-right:auto;
   font-family:var(--body);font-size:.95rem;font-weight:500;color:rgba(255,255,255,.9)}
 .nav__links a{position:relative;padding:6px 2px;transition:color .25s;white-space:nowrap}
 .nav__links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--hero-blue);transition:width .3s var(--ease)}
@@ -746,7 +746,16 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   .nav.is-open .nav__links a:hover{color:#fff;background:rgba(255,255,255,.06)}
   .nav__burger{display:grid}
   .nav__right{margin-left:auto}
-  .hero__inner{padding-block:clamp(96px,20vh,140px)}
+  
+  .hero__inner{padding-block:clamp(100px,15vh,120px) 40px; padding-inline: 20px;}
+  .hero__title{font-size:clamp(2.5rem,10vw,4rem); margin-top:0.8rem;}
+  .hero__sub{font-size:1rem; margin-top:1rem;}
+  .hero__bottom-row{
+    position:relative; bottom:auto; left:auto; right:auto;
+    padding-inline: 0; margin-top: 40px;
+  }
+  .hero__features{gap:12px; flex-direction:column; align-items:flex-start}
+  
   .hero__hud .tag{font-size:.6rem}
   .bottleneck__grid,.booking__grid,.gear__grid,.pricing__card,.crew__top{grid-template-columns:1fr;gap:32px}
   .ind-row{grid-template-columns:1fr;gap:18px}
@@ -768,6 +777,41 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   .hero__stats{gap:16px}
   .stat+.stat{padding-left:16px}
   .nav__tc{display:none}
+  
+  /* Additional mobile sizing */
+  :root {
+    --pad: clamp(16px, 4vw, 32px); /* Tighter sections on mobile */
+  }
+  .wordmark b {
+    font-size: clamp(3.5rem, 20vw, 8rem);
+  }
+  .btn--lg {
+    padding: 0.9em 1.5em;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+  .hero__cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  .feature__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+  
+  /* Fix oversized cards on mobile */
+  .shoot-card {
+    aspect-ratio: 4/3;
+  }
+  
+  /* Fix cropped crew image */
+  .crew__band {
+    aspect-ratio: 16/9;
+    min-height: auto;
+    margin-top: 24px;
+  }
 }
 
 /* ============================================================
