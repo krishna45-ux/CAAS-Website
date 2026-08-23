@@ -899,6 +899,12 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   .crew__band img.shot {
     position: static;
   }
+
+  /* Footer layout tweaks for mobile */
+  .footer { padding-top: 40px; }
+  .footer__top { flex-direction: column; gap: 24px; padding-bottom: 24px; }
+  .footer__links { gap: 12px 18px; font-size: 0.9rem; }
+  .footer__copy { flex-direction: column; gap: 10px; align-items: flex-start; padding-block: 16px; }
 }
 
 /* ============================================================
