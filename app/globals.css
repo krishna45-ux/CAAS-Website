@@ -771,7 +771,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 @media (max-width:960px){
   .nav__tc{display:none}
   .nav__links{
-    display:flex;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;
+    display:flex;position:absolute;top:calc(100% + 14px);left:16px;right:16px;flex-direction:column;
     gap:2px;background:rgba(10,14,36,.94);backdrop-filter:blur(22px) saturate(1.5);
     -webkit-backdrop-filter:blur(22px) saturate(1.5);padding:12px 14px;border-radius:20px;
     border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -28px rgba(0,0,0,.8);
