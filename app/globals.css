@@ -247,13 +247,32 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .nav__cta{padding:.62em 1.3em;font-size:.88rem}
 .nav__burger{display:none;width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
   place-items:center;flex:none;background:transparent}
-.nav__burger span,.nav__burger span::before,.nav__burger span::after{
-  content:"";display:block;width:18px;height:2px;background:#EDF1F7;border-radius:2px;position:relative;transition:.3s}
-.nav__burger span::before{position:absolute;top:-6px}
-.nav__burger span::after{position:absolute;top:6px}
-.nav.is-open .nav__burger span{background:transparent}
-.nav.is-open .nav__burger span::before{top:0;transform:rotate(45deg)}
-.nav.is-open .nav__burger span::after{top:0;transform:rotate(-45deg)}
+.nav__burger span, .nav__burger span::before, .nav__burger span::after {
+  content: ""; display: block; width: 18px; height: 2px;
+  background: #EDF1F7; border-radius: 2px; position: relative;
+}
+.nav__burger span {
+  transition: background 0s 0.2s;
+}
+.nav__burger span::before, .nav__burger span::after {
+  position: absolute;
+  transition: top 0.2s 0.2s cubic-bezier(0.3, 1, 0.7, 1),
+              transform 0.2s cubic-bezier(0.3, 1, 0.7, 1);
+}
+.nav__burger span::before { top: -6px; }
+.nav__burger span::after { top: 6px; }
+
+.nav.is-open .nav__burger span {
+  background: transparent;
+}
+.nav.is-open .nav__burger span::before,
+.nav.is-open .nav__burger span::after {
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.3, 1, 0.7, 1),
+              transform 0.2s 0.2s cubic-bezier(0.3, 1, 0.7, 1);
+}
+.nav.is-open .nav__burger span::before { transform: rotate(45deg); }
+.nav.is-open .nav__burger span::after { transform: rotate(-45deg); }
 
 /* scrubber / recording timeline progress */
 .scrubber{position:fixed;top:0;left:0;height:3px;width:0;z-index:101;
