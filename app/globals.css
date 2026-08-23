@@ -228,7 +228,10 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .nav.is-stuck .nav__login { color: var(--text); }
 .nav.is-stuck .brand__logo { filter: invert(1); }
 .nav.is-stuck .nav__burger { border-color: rgba(0,0,0,.2); }
-.nav.is-stuck .nav__burger span { background: var(--text); }
+.nav.is-stuck .nav__burger span,
+.nav.is-stuck .nav__burger span::before,
+.nav.is-stuck .nav__burger span::after { background: var(--text); }
+.nav.is-stuck.is-open .nav__burger span { background: transparent; }
 .brand{display:flex;align-items:center;flex:none}
 .brand__logo{width:clamp(98px,11vw,125px);height:auto;display:block}
 .nav__links{display:flex;gap:clamp(12px,1.5vw,36px);margin-left:0;margin-right:auto;
@@ -797,7 +800,29 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   .portfolio__grid{grid-template-columns:repeat(3,1fr)}
   .portfolio__more{grid-column:span 3}
   .pricing__cta-row{justify-content:flex-start}
-  .note{margin-inline:auto}
+  
+  .note {
+    max-width: 100% !important;
+    transform: none !important;
+    margin: 0 0 24px 0 !important;
+    padding: 1.5rem !important;
+    border-radius: 8px !important;
+  }
+  .note::after { display: none !important; }
+  
+  .gear__bg {
+    -webkit-mask-image: linear-gradient(180deg, transparent 5%, #000 60%);
+            mask-image: linear-gradient(180deg, transparent 5%, #000 60%);
+  }
+  .gear-section {
+    padding-bottom: 60px !important;
+  }
+  .gear__pic {
+    display: none;
+  }
+  .gear__txt {
+    padding-inline: 16px;
+  }
 }
 @media (max-width:640px){
   .shoot__grid,.stories__grid{grid-template-columns:1fr}
@@ -813,7 +838,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   
   /* Additional mobile sizing */
   :root {
-    --pad: clamp(12px, 3vw, 20px); /* Tighter wrap padding */
+    --pad: 20px; /* Better wrap padding on mobile */
   }
   .section { padding-block: 30px !important; }
   .section--tight { padding-block: 20px !important; }
@@ -847,11 +872,32 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
     aspect-ratio: 4/3;
   }
   
+  /* Crew layout tweaks for mobile */
+  .crew__cta .h-section {
+    font-size: clamp(1.5rem, 6.5vw, 1.8rem) !important;
+  }
+  .crew__cta .btn {
+    width: auto;
+    padding: 0.8em 1.4em;
+    font-size: 0.9rem;
+  }
+  .crew__note {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
   /* Fix cropped crew image */
   .crew__band {
-    aspect-ratio: 16/9;
+    aspect-ratio: auto;
     min-height: auto;
-    margin-top: 24px;
+    margin-top: 16px !important;
+    margin-bottom: -20px !important;
+    width: 100%;
+    margin-left: 0;
+  }
+  .crew__band img.shot {
+    position: static;
   }
 }
 

@@ -178,8 +178,8 @@ export default function Home() {
       <main id="top">
         {/* HERO */}
         <section className="hero">
-          <video src="/Video/Hero_video.mp4" autoPlay loop muted playsInline className="hero__bg desktop-video"></video>
-          <video src="/Video/Hero_mobile.mp4" autoPlay loop muted playsInline className="hero__bg mobile-video"></video>
+          <video src="/Video/Hero_video.mp4" poster="/images/hero_video_poster.png" autoPlay loop muted playsInline className="hero__bg desktop-video"></video>
+          <video src="/Video/Hero_mobile.mp4" poster="/images/hero_video_poster.png" autoPlay loop muted playsInline className="hero__bg mobile-video"></video>
           
           <div className="hero__inner">
             <div className="hero__copy">
