@@ -160,7 +160,7 @@ export default function Home() {
             <a href="#join" className="btn nav__cta mobile-only" onClick={() => setIsNavOpen(false)}>Join as Cameraman</a>
           </nav>
           <div className="nav__right">
-            <a href="#login" style={{fontFamily:'var(--body)', fontSize:'.92rem', color:'#fff', marginRight:'10px', whiteSpace:'nowrap'}}>Log in</a>
+            <a href="#login" className="nav__login">Log in</a>
             <a href="#join" className="btn nav__cta">Join as Cameraman</a>
           </div>
           <button 
@@ -265,12 +265,11 @@ export default function Home() {
               <h2 className="h-section">Meet the Sar<span className="u-gold">CAAS</span>tic Crew</h2>
               <a href="#stories" className="btn btn--coral btn--lg">They're waiting to capture
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
-              <p className="crew__note">Vetted specialists. No holidays. No weddings. Just high-end production units.</p>
+              <p className="crew__note">Vetted specialists. No hobbyists. No weddings. Just high-end production units.</p>
             </div>
           </div>
           <div className="crew__band reveal">
-            <img className="shot" src="/images/sarcastic_crew.png" alt="The SarCAASstic crew on location"/>
-            <span className="crew__band-label">The crew · 24 specialists on call</span>
+            <img className="shot" src="/images/sarcastic_crew_2.png" alt="The SarCAASstic crew on location"/>
           </div>
         </section>
 
@@ -436,7 +435,8 @@ export default function Home() {
         </section>
 
         {/* GEAR (dark) */}
-        <section className="section dark">
+        <section className="section dark gear-section">
+          <img className="gear__bg" src="/images/professional_lens.jpg" alt="" aria-hidden="true"/>
           <div className="wrap gear__grid">
             <div className="gear__txt">
               <span className="eyebrow">The equipment</span>
@@ -458,9 +458,7 @@ export default function Home() {
             </div>
             <div className="gear__pic reveal-lens">
               <div className="gear__circle">
-                <div className="gear__circle-txt"><b>More Than Just a Camera.</b><span>The gear that brings ideas to life</span></div>
-                <img className="shot" src="/images/professional_lens.jpg" alt="Cinema-grade prime lens close-up"/>
-                <div className="gear__flare"></div>
+                <img className="shot" src="/images/gear_2.png" alt="Cinema-grade gear layout"/>
               </div>
             </div>
           </div>
