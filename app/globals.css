@@ -358,7 +358,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 /* ============================================================
    BOTTLENECK (dark) — objection vs answer chat
    ============================================================ */
-.bottleneck{position:relative;overflow:hidden;padding-block:clamp(40px, 4vw, 60px) !important;}
+.bottleneck{position:relative;overflow:hidden}
 .bottleneck__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
   opacity:.16;filter:grayscale(.35) contrast(1.05);
   -webkit-mask-image:linear-gradient(100deg,#000,transparent 66%);
