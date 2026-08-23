@@ -178,7 +178,8 @@ export default function Home() {
       <main id="top">
         {/* HERO */}
         <section className="hero">
-          <video src="/Video/Hero_video.mp4" autoPlay loop muted playsInline className="hero__bg"></video>
+          <video src="/Video/Hero_video.mp4" autoPlay loop muted playsInline className="hero__bg desktop-video"></video>
+          <video src="/Video/Hero_mobile.mp4" autoPlay loop muted playsInline className="hero__bg mobile-video"></video>
           
           <div className="hero__inner">
             <div className="hero__copy">
@@ -529,14 +530,16 @@ export default function Home() {
               <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" strokeWidth="1.6"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></svg></a>
             </div>
           </div>
-          <div className="footer__copy">
-            <span>© 2026 CAAS — Cameraman as a Service. All rights reserved.</span>
-            <span>Made with 🔥 by <a href="https://labs.theangaarbatch.in/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#fff' }}>The Angaar Labs</a></span>
-          </div>
         </div>
         <div className="wordmark">
           <b>CAAS</b>
           <small>Cameraman as a Service</small>
+        </div>
+        <div className="wrap">
+          <div className="footer__copy">
+            <span>© 2026 CAAS — Cameraman as a Service. All rights reserved.</span>
+            <span>Made with 🔥 by <a href="https://labs.theangaarbatch.in/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#fff' }}>The Angaar Labs</a></span>
+          </div>
         </div>
       </footer>
     </div>
