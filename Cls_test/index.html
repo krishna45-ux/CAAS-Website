@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAAS — Your Professional Cameraman On Demand</title>
+  <meta name="description"
+    content="CAAS (Cameraman as a Service) connects businesses, creators and brands with professional cameramen on demand. Book world-class videographers and photographers in minutes. Starting at ₹3,500.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="preload">
+  <div id="introOverlay" class="intro-overlay">
+    <div class="intro-overlay__inner">
+      <video id="introVideo" class="intro-overlay__video" muted playsinline>
+        <source src="Video/Intro_vid.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- recording timeline scrubber -->
+  <div class="scrubber" id="scrubber"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="#top" class="brand" aria-label="CAAS — home">
+        <img src="images/nav_logo.png" class="brand__logo" alt="" width="776" height="236">
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#knowledge-centre">Knowledge Centre</a>
+      </nav>
+      <div class="nav__right">
+        <span class="nav__tc" aria-hidden="true"><span class="rec"></span><span id="navTc">00:00:00:00</span></span>
+        <a href="#pricing" class="btn btn--gold nav__cta">Book a Shoot</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <video class="hero__video" autoplay muted loop playsinline poster="images/hero_poster.jpg">
+        <source src="Video/Cam_fin_gwr_video_mvp.mp4" type="video/mp4">
+      </video>
+      <div class="hero__scrim"></div>
+      <div class="hero__thirds"></div>
+      <div class="hero__hud" aria-hidden="true">
+        <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+        <span class="tag rec"><span class="dot"></span>REC <span id="heroTc">00:00:00:00</span></span>
+        <span class="tag fmt">6K · 24 FPS</span>
+        <span class="tag foc">f/1.8 · 50mm</span>
+        <span class="tag iso">ISO 800</span>
+      </div>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <span class="pill"><span class="dot"></span>No More Sacrificing on a Cameraman</span>
+          <h1 class="hero__title">
+            <span class="line"><span>Your Professional</span></span>
+            <span class="line"><span class="u-gold">Cameraman</span></span>
+            <span class="line"><span>On Demand.</span></span>
+          </h1>
+          <p class="hero__sub">Skip the endless quotes and no-shows. <b>Book world-class videographers and photographers
+              in minutes</b> — vetted crews, cinema gear, delivered on time.</p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--gold btn--lg">Book Your First Shoot
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#portfolio" class="btn btn--ghost btn--lg"><span class="play"><svg viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg></span>View Showreel</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__n" data-count="500" data-suffix="+">0</div>
+              <div class="stat__l">Shoots delivered</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n"><span>₹</span><span data-count="3500">0</span></div>
+              <div class="stat__l">Starting rate</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">4.9 <span class="stars">★★★★★</span></div>
+              <div class="stat__l">Client rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Social Media</span><span>Product &amp; Retail</span><span>Real
+          Estate</span><span>Events</span><span>Corporate</span><span>Hospitality</span><span>Brand
+          Films</span><span>Influencer</span>
+        <span>Social Media</span><span>Product &amp; Retail</span><span>Real
+          Estate</span><span>Events</span><span>Corporate</span><span>Hospitality</span><span>Brand
+          Films</span><span>Influencer</span>
+      </div>
+    </div>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="section statement wrap">
+      <h2 class="reveal">Not Just <span class="u-strike">Camera</span>,<br>a <span
+          class="u-cyan u-italic">Cameraman&nbsp;…</span></h2>
+      <div class="lead-card reveal d1">
+        <b>CAAS (Cameraman as a Service)</b> connects businesses, creators, influencers and brands with professional
+        cameramen on demand. From social media content, influencer and personal-brand shoots to product, business,
+        real-estate and event coverage — you book the right cameraman for exactly what you need. Starting at <span
+          class="price-chip">₹3,500 for a 3-hour shoot</span>, with flexible additional hours and production
+        requirements based on the project.
+      </div>
+    </section>
+
+    <!-- ============ SHOOT ============ -->
+    <section class="section section--tight wrap" id="services">
+      <div class="head head--center">
+        <span class="eyebrow eyebrow--center">Usually where we shoot</span>
+        <h2 class="h-section reveal">Usually Where We <span class="u-cyan">Shoot</span></h2>
+        <p class="lead-txt reveal d1">Our crew is ready to deploy across a range of real-world scenarios and
+          environments — no brief too big or too small.</p>
+      </div>
+      <div class="shoot__grid">
+        <article class="shoot-card reveal d1"><img class="shot" src="images/storyteller.jpg"
+            alt="Cameraman filming social-media content in a studio">
+          <div class="shoot-card__caption"><b>Social Media Content</b><span>f/2.0 · 35mm</span></div>
+        </article>
+        <article class="shoot-card reveal d2"><img class="shot" src="images/blog_wedding.jpg"
+            alt="Crew covering an outdoor event">
+          <div class="shoot-card__caption"><b>Events &amp; Exhibitions</b><span>f/2.8 · 24mm</span></div>
+        </article>
+        <article class="shoot-card reveal d3"><img class="shot" src="images/blog_corporate.jpg"
+            alt="Corporate team on a real-estate shoot">
+          <div class="shoot-card__caption"><b>Real Estate &amp; Infra</b><span>f/4.0 · 16mm</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CREW ============ -->
+    <section class="section section--tight wrap">
+      <div class="crew__top">
+        <div class="reveal">
+          <p class="note">We are nothing without them. They're the reason clients return, deadlines are met, and every
+            story is captured with excellence.
+            <span class="who">— The CAAS promise</span>
+          </p>
+        </div>
+        <div class="crew__cta reveal d1">
+          <span class="eyebrow">The professionals</span>
+          <h2 class="h-section">Meet the Sar<span class="u-cyan">CAAS</span>tic Crew</h2>
+          <a href="#stories" class="btn btn--coral btn--lg">They're waiting to capture
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <p class="crew__note">Vetted specialists. No holidays. No weddings. Just high-end production units.</p>
+        </div>
+      </div>
+      <div class="crew__band reveal">
+        <img class="shot" src="images/sarcastic_crew.png" alt="The SarCAASstic crew on location">
+        <span class="crew__band-label">The crew · 24 specialists on call</span>
+      </div>
+    </section>
+
+    <!-- ============ BOTTLENECK (dark) ============ -->
+    <section class="section dark bottleneck">
+      <img class="bottleneck__bg" src="images/blog_lighting.jpg" alt="" aria-hidden="true">
+      <div class="wrap bottleneck__grid">
+        <div class="reveal">
+          <span class="eyebrow">Content OS</span>
+          <h2 class="h-section">Why Content Creation <span class="u-coral">Shouldn't</span> Be a Bottleneck.</h2>
+          <p class="lead-txt bottleneck__body">We've spent 12,000+ hours on set so you don't have to. CAAS is the
+            engineering answer to production logistics — one system, any shoot, on demand.</p>
+          <div class="bottleneck__trust">
+            <div class="avatars"><span>AR</span><span>PK</span><span>MS</span><span>+</span></div>
+            <small>Trusted by our full-time crew</small>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="msg msg--q reveal">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+                  stroke="currentColor" stroke-width="1.6" />
+              </svg>Pricing pain</div>
+            <p>"Freelancers take weeks to quote — and even longer to deliver."</p>
+          </div>
+          <div class="msg msg--a reveal d1">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>CAAS</div>
+            <p>Book instantly at a fixed rate. Get your footage the same day.</p>
+          </div>
+          <div class="msg msg--q reveal d2">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+                  stroke="currentColor" stroke-width="1.6" />
+              </svg>The challenge</div>
+            <p>"Every videographer pushes the cost up 40% past our budget."</p>
+          </div>
+          <div class="msg msg--a reveal d3">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>CAAS</div>
+            <p>One transparent price. Every add-on included — zero surprises.</p>
+          </div>
+          <div class="msg msg--q reveal d4">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+                  stroke="currentColor" stroke-width="1.6" />
+              </svg>Pricing pain</div>
+            <p>"Quality is inconsistent, and there's always a brand risk."</p>
+          </div>
+          <div class="msg msg--a reveal d5">
+            <div class="msg__tag"><svg class="ic" viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>CAAS</div>
+            <p>Standardised, vetted crews. Consistent output on every single shoot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section wrap">
+      <div class="booking__grid">
+        <div class="reveal">
+          <span class="eyebrow">No one's here to waste time &amp; money</span>
+          <h2 class="h-section">Book Smart</h2>
+          <p class="lead-txt">Manage your whole production calendar in one place. Certain days unlock faster turnarounds
+            and premium kit availability.</p>
+        </div>
+        <div class="calendar reveal d1">
+          <div class="calendar__days" role="tablist" aria-label="Availability by day">
+            <button class="calendar__day" role="tab" data-day="mon">MON <span class="tick"></span></button>
+            <button class="calendar__day is-active is-prime" role="tab" aria-selected="true" data-day="tue">TUE <span
+                class="tick"></span></button>
+            <button class="calendar__day" role="tab" data-day="wed">WED <span class="tick"></span></button>
+            <button class="calendar__day" role="tab" data-day="thu">THU <span class="tick"></span></button>
+            <button class="calendar__day" role="tab" data-day="fri">FRI <span class="tick"></span></button>
+          </div>
+          <div class="calendar__panel">
+            <h4><svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2 15 9l7 .5-5.5 4.5L18 21l-6-3.8L6 21l1.5-7L2 9.5 9 9z" stroke="currentColor"
+                  stroke-width="1.6" stroke-linejoin="round" />
+              </svg>Prime Availability</h4>
+            <p id="dayMsg">Tuesdays offer the highest availability for our elite RED camera kits.</p>
+            <div class="calendar__meta">
+              <span>CREW <b>Ready</b></span><span>KIT <b>RED / Sony</b></span><span>TURNAROUND <b>24h</b></span>
+            </div>
+            <a href="#pricing" class="btn btn--coral">Check if slots are available
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUN FACT ============ -->
+    <div class="funfact wrap">
+      <div class="funfact__inner reveal">
+        <div class="funfact__tag">FUN FACT</div>
+        <h3>You don't need to know what kind of shoot you need.</h3>
+        <strong>THAT'S OUR JOB.</strong>
+      </div>
+    </div>
+
+    <!-- ============ INDUSTRIES ============ -->
+    <section class="section wrap" id="industries">
+      <div class="head">
+        <span class="eyebrow">Industries</span>
+        <h2 class="h-section reveal">Industries We Serve</h2>
+        <p class="lead-txt reveal d1">Deep expertise, translated into the unique visual language of your business.</p>
+      </div>
+      <div class="ind">
+        <article class="ind-row">
+          <div class="ind-row__txt reveal"><span class="ind-row__num">01 — Creators</span>
+            <h3>Brands, Creators &amp; Social Media</h3>
+            <p>Built for businesses and individuals who create content consistently and need a crew that keeps up.</p>
+          </div>
+          <div class="ind-row__pic reveal d1"><img class="shot" src="images/storyteller.jpg"
+              alt="Creator filming branded content"></div>
+        </article>
+        <article class="ind-row">
+          <div class="ind-row__txt reveal"><span class="ind-row__num">02 — Commerce</span>
+            <h3>Products, Retail &amp; Hospitality</h3>
+            <p>Everything a customer should feel about you before they ever visit or buy.</p>
+          </div>
+          <div class="ind-row__pic reveal d1"><img class="shot" src="images/professional_lens.jpg"
+              alt="Close-up product photography with a cinema lens"></div>
+        </article>
+        <article class="ind-row">
+          <div class="ind-row__txt reveal"><span class="ind-row__num">03 — Enterprise</span>
+            <h3>Corporate, Manufacturing &amp; Industrial</h3>
+            <p>Professional storytelling for businesses that build, manufacture and operate at scale.</p>
+          </div>
+          <div class="ind-row__pic reveal d1"><img class="shot" src="images/blog_corporate.jpg"
+              alt="Corporate team being filmed at the office"></div>
+        </article>
+        <article class="ind-row">
+          <div class="ind-row__txt reveal"><span class="ind-row__num">04 — Spaces</span>
+            <h3>Properties, Spaces &amp; Experiences</h3>
+            <p>Made for businesses where the space itself is the product worth showing off.</p>
+          </div>
+          <div class="ind-row__pic reveal d1"><img class="shot" src="images/blog_wedding.jpg"
+              alt="Wide capture of an event space"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="section section--tight wrap" id="portfolio">
+      <div class="head">
+        <span class="eyebrow">Fresh from the field</span>
+        <h2 class="h-section reveal">Our Latest Appearance, <span class="u-cyan">Fresh From the Field</span></h2>
+        <p class="lead-txt reveal d1">A living feed of our most recent work — straight off the memory card.</p>
+      </div>
+      <div class="portfolio__grid">
+        <figure class="pf reveal"><img class="shot" src="images/professional_lens.jpg" alt="Cinema prime lens detail">
+          <figcaption class="pf__cap">STILL 01 · f/2.8</figcaption>
+        </figure>
+        <figure class="pf reveal d1"><img class="shot" src="images/blog_lighting.jpg"
+            alt="Golden-hour silhouette shoot">
+          <figcaption class="pf__cap">STILL 02 · f/1.8</figcaption>
+        </figure>
+        <figure class="pf reveal d2"><img class="shot" src="images/storyteller.jpg" alt="Studio storyteller in frame">
+          <figcaption class="pf__cap">STILL 03 · f/4.0</figcaption>
+        </figure>
+        <figure class="pf reveal d3"><img class="shot" src="images/blog_wedding.jpg" alt="Outdoor event coverage">
+          <figcaption class="pf__cap">STILL 04 · f/2.0</figcaption>
+        </figure>
+        <figure class="pf reveal"><img class="shot" src="images/blog_corporate.jpg" alt="Corporate team on set">
+          <figcaption class="pf__cap">STILL 05 · f/2.8</figcaption>
+        </figure>
+        <figure class="pf reveal d1"><img class="shot" src="images/hero_poster.jpg"
+            alt="Frame from a recent brand film">
+          <figcaption class="pf__cap">STILL 06 · f/5.6</figcaption>
+        </figure>
+        <div class="portfolio__more reveal d2">
+          <h3>Wanna See More ???</h3>
+          <a href="#" class="btn btn--coral btn--lg">Check Out Our Portfolio
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GEAR (dark) ============ -->
+    <section class="section dark">
+      <div class="wrap gear__grid">
+        <div class="reveal">
+          <span class="eyebrow">The equipment</span>
+          <h2 class="h-section">What Our<br>Team Carries.</h2>
+          <p class="lead-txt">Precision tools for precision results. We never compromise on gear, glass or stabilisation
+            — every unit ships with our advanced cinema-grade kit.</p>
+          <ul class="gear__list">
+            <li><span class="n">01</span><span><b>Cinema-grade 4K/6K Cameras</b><span>RED, Sony &amp; Canon
+                  bodies</span></span></li>
+            <li><span class="n">02</span><span><b>Prime &amp; Zoom Lenses</b><span>35mm · 50mm · 85mm &amp;
+                  beyond</span></span></li>
+            <li><span class="n">03</span><span><b>Motion &amp; Anti-shake Systems</b><span>Pro gimbals &amp;
+                  stabilisers</span></span></li>
+            <li><span class="n">04</span><span><b>Lightweight RGB Lighting</b><span>Full studio rigs, on
+                  location</span></span></li>
+            <li><span class="n">05</span><span><b>Broadcast Audio &amp; Recording</b><span>Clean sound, every
+                  take</span></span></li>
+          </ul>
+          <a href="#pricing" class="btn btn--cyan">&amp; expertise to deliver the best
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+        </div>
+        <div class="reveal d1">
+          <div class="gear__circle">
+            <div class="gear__circle-txt"><b>More Than Just a Camera.</b><span>The gear that brings ideas to life</span>
+            </div>
+            <img class="shot" src="images/professional_lens.jpg" alt="Cinema-grade prime lens close-up">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section wrap" id="pricing">
+      <div class="pricing__card reveal">
+        <span class="pricing__badge">The package</span>
+        <div>
+          <div class="pricing__price">₹3500</div>
+          <div class="pricing__rate">Base rate · 3-hour session</div>
+          <p class="pricing__quote">"Whether it's a one-off drop or a monthly retainer — one crew, one price, zero
+            drama."</p>
+        </div>
+        <div>
+          <ul class="pricing__list">
+            <li><svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>Professional cameraman &amp; crew</li>
+            <li><svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>3-hour production shoot</li>
+            <li><svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>Cinema-grade kit &amp; lighting</li>
+            <li><svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>Raw + edited deliverables</li>
+            <li><svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 13 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>Fully vetted &amp; insured</li>
+          </ul>
+          <div class="pricing__cta-row">
+            <a href="#" class="btn btn--coral btn--lg">Yes, that's what I'm looking for
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MONTHLY ============ -->
+    <section class="section section--tight monthly wrap">
+      <div class="monthly__card reveal">
+        <div class="monthly__ey">Need shoots every month?</div>
+        <h3>We've already planned for this.</h3>
+        <p>Whether you're managing 3 brands or 30, our monthly production plans make sure you always have a professional
+          crew ready — exactly when your content calendar demands it.</p>
+      </div>
+    </section>
+
+    <!-- ============ KNOWLEDGE CENTRE ============ -->
+    <section class="section dark" id="knowledge-centre">
+      <div class="wrap">
+        <div class="head head--center">
+          <span class="eyebrow eyebrow--center">The chronicle</span>
+          <h2 class="h-section reveal">The <span class="u-cyan">Knowledge</span> Centre</h2>
+          <p class="lead-txt reveal d1">Ones who pay off well to our efforts. Our biggest strength was never the cameras
+            — it's the people behind them.</p>
+        </div>
+        <div class="stories__grid">
+          <article class="story reveal d1">
+            <div class="story__body">
+              <div class="story__label"><b>Priya · Brand Lead</b><span>ON SET / 01</span></div>
+              <p>"The CAAS crew turned up fully organised — I didn't have to babysit a thing. One shift, full setup,
+                cleanup and capture, handled."</p>
+            </div>
+            <div class="story__pic"><img class="shot" src="images/storyteller.jpg" alt="Priya's brand shoot on set">
+            </div>
+          </article>
+          <article class="story reveal d2">
+            <div class="story__body">
+              <div class="story__label"><b>Arjun · NGO Launch</b><span>ON SET / 02</span></div>
+              <p>"The rig they brought for our launch was insane — RED Komodo, the works. The final cut looks like it
+                belongs on Netflix."</p>
+            </div>
+            <div class="story__pic"><img class="shot" src="images/blog_lighting.jpg"
+                alt="Cinematic lighting on the NGO launch shoot"></div>
+          </article>
+          <article class="story reveal d3">
+            <div class="story__body">
+              <div class="story__label"><b>Meera · Real Estate</b><span>ON SET / 03</span></div>
+              <p>"I used to underestimate turnaround. Booked at noon, had the high-res edit the same evening. The
+                result? Priceless."</p>
+            </div>
+            <div class="story__pic"><img class="shot" src="images/blog_wedding.jpg" alt="Real-estate property capture">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section final wrap">
+      <h2 class="reveal">Ready to Capture<br><span class="u-cyan u-italic">Precision?</span></h2>
+      <p class="reveal d1">Join 500+ brands using CAAS to produce high-end content at scale. No arguments, no
+        complicated quotes — just results.</p>
+      <div class="final__row reveal d2">
+        <a href="#pricing" class="btn btn--dark btn--lg">Get Started</a>
+        <a href="#pricing" class="btn btn--ghost btn--lg">View Pricing</a>
+      </div>
+      <p class="final__small reveal d3">Available across 12 cities · Book in under 60 seconds</p>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <a href="#top" class="brand" aria-label="CAAS home">
+          <img src="images/logo_ondark.png" alt="CAAS — Cameraman as a Service" class="footer__logo">
+        </a>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#top">About Us</a><a href="#shoot">Services</a><a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a
+            href="#">Contact</a>
+        </nav>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.5 3h3l-6.6 7.5L21.5 21h-5.9l-4.1-5.4L6.6 21H3.5l7-8L2.9 3h6l3.7 4.9zm-1 16h1.6L8.1 4.6H6.4z" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6 9v10H3V9zm-1.5-5a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM9 9h3v1.5c.5-.9 1.7-1.8 3.4-1.8 3 0 3.6 2 3.6 4.5V19h-3v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19H9z" />
+            </svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none">
+              <rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
+              <path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>© 2026 CAAS — Cameraman as a Service. All rights reserved.</span>
+        <span>MADE FOR CREATORS · SHOT ON RED</span>
+      </div>
+    </div>
+    <div class="wordmark">
+      <b>CAAS</b>
+      <small>Cameraman as a Service</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
