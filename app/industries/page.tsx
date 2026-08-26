@@ -6,30 +6,36 @@ export default function ServicesPage() {
     <main id="top" className="page-main services-page">
       
       {/* 1. HERO SECTION */}
-      <section className="services-hero page-section dark">
-        <div className="wrap services-hero__inner">
-          <div className="services-hero__content reveal-left">
-            <span className="eyebrow eyebrow--cyan">— Professional Solutions</span>
-            <h1 className="hero__title">
-              <span className="line"><span>Specialized</span></span><br/>
-              <span className="line"><span className="u-cyan">Content</span></span><br/>
-              <span className="line"><span>Production.</span></span>
-            </h1>
-            <p className="hero__sub">Hiring a professional cameraman shouldn't depend on luck, availability or endless phone calls.</p>
-            <div className="services-hero__ctas">
-              <Link href="/pricing" className="btn btn--blue btn--lg">Book a Shoot</Link>
-              <Link href="/portfolio" className="btn btn--ghost btn--lg">View Portfolio</Link>
+      <section className="services-cta page-section">
+        <div className="wrap services-cta__inner">
+          <div className="services-cta__content reveal-left">
+            <span className="eyebrow eyebrow--cyan">Let's Talk</span>
+            <h1 className="h-section" style={{ marginTop: 0 }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h1>
+            <p>Whether it's a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
+            
+            <div className="services-cta__buttons">
+              <Link href="/contact" className="btn btn--blue btn--lg">Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
+            </div>
+
+            <div className="services-cta__stats">
+              <div>
+                <strong>1500+</strong>
+                <span>PROJECTS COMPLETED</span>
+              </div>
+              <div>
+                <strong>15+</strong>
+                <span>SPECIALIZED VERTICALS</span>
+              </div>
+              <div>
+                <strong>48hr</strong>
+                <span>DELIVERY PROMISE</span>
+              </div>
             </div>
           </div>
-          <div className="services-hero__image reveal-right">
-            <Image 
-              src="/images/hero_cinematic.jpg"
-              alt="Professional gimbal setup"
-              width={600}
-              height={800}
-              priority
-              style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '16px' }}
-            />
+          
+          <div className="services-cta__image reveal-right">
+             <Image src="/images/hero_cinematic.jpg" alt="Cameraman" fill priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -259,23 +265,23 @@ export default function ServicesPage() {
             <div className="niche-diagram__line"></div>
             
             {/* Left Branches */}
-            <div className="niche-item niche-item--left" style={{ top: '15%' }}>
+            <div className="niche-item niche-item--left" style={{ top: '5%' }}>
               <div className="niche-item__box">Product Shoot</div>
               <div className="niche-item__arrow"></div>
             </div>
-            <div className="niche-item niche-item--left" style={{ top: '30%' }}>
+            <div className="niche-item niche-item--left" style={{ top: '23%' }}>
               <div className="niche-item__box">Fashion & Models Shoot</div>
               <div className="niche-item__arrow"></div>
             </div>
-            <div className="niche-item niche-item--left" style={{ top: '45%' }}>
+            <div className="niche-item niche-item--left" style={{ top: '41%' }}>
               <div className="niche-item__box">Interviews & Podcasts Shoot</div>
               <div className="niche-item__arrow"></div>
             </div>
-            <div className="niche-item niche-item--left" style={{ top: '60%' }}>
+            <div className="niche-item niche-item--left" style={{ top: '59%' }}>
               <div className="niche-item__box">Travel & Hospitality Shoot</div>
               <div className="niche-item__arrow"></div>
             </div>
-            <div className="niche-item niche-item--left" style={{ top: '75%' }}>
+            <div className="niche-item niche-item--left" style={{ top: '77%' }}>
               <Link href="/contact" className="niche-item__box niche-item__box--cyan">
                 Dont Look Confused,<br/><strong>Reach Out to us Directly</strong>
               </Link>
@@ -283,30 +289,29 @@ export default function ServicesPage() {
             </div>
 
             {/* Right Branches */}
-            <div className="niche-item niche-item--right" style={{ top: '22%' }}>
+            <div className="niche-item niche-item--right" style={{ top: '14%' }}>
               <div className="niche-item__arrow"></div>
               <div className="niche-item__box">Brand Campaigns Shoot</div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '37%' }}>
+            <div className="niche-item niche-item--right" style={{ top: '32%' }}>
               <div className="niche-item__arrow"></div>
               <div className="niche-item__box">Events & Experiences Shoot</div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '52%' }}>
+            <div className="niche-item niche-item--right" style={{ top: '50%' }}>
               <div className="niche-item__arrow"></div>
               <div className="niche-item__box">Fitness & Sports Shoot</div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '67%' }}>
+            <div className="niche-item niche-item--right" style={{ top: '68%' }}>
               <div className="niche-item__arrow"></div>
               <div className="niche-item__box">Corporate Shoot</div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '82%' }}>
+            <div className="niche-item niche-item--right" style={{ top: '86%' }}>
               <div className="niche-item__arrow"></div>
               <div className="niche-item__box">Office Party & MEET UPS</div>
             </div>
-
-            <div className="niche-diagram__footer">
-              It all Starts with Shoot<br/>&<br/><span className="u-cyan">Ends with Planning for Next</span>
-            </div>
+          </div>
+          <div className="niche-diagram__footer" style={{ position: 'static', margin: '40px auto 0', transform: 'none', color: 'var(--text)' }}>
+            It all Starts with Shoot<br/>&<br/><span className="u-cyan">Ends with Planning for Next</span>
           </div>
         </div>
       </section>
@@ -548,40 +553,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 10. FOOTER CTA */}
-      <section className="services-cta dark">
-        <div className="wrap services-cta__inner">
-          <div className="services-cta__content reveal-left">
-            <span className="eyebrow eyebrow--cyan">Let's Talk</span>
-            <h2 className="h-section">Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h2>
-            <p>Whether it's a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
-            
-            <div className="services-cta__buttons">
-              <Link href="/contact" className="btn btn--blue btn--lg">Request a Custom Quote</Link>
-              <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
-            </div>
 
-            <div className="services-cta__stats">
-              <div>
-                <strong>1500+</strong>
-                <span>PROJECTS COMPLETED</span>
-              </div>
-              <div>
-                <strong>15+</strong>
-                <span>SPECIALIZED VERTICALS</span>
-              </div>
-              <div>
-                <strong>48hr</strong>
-                <span>DELIVERY PROMISE</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="services-cta__image reveal-right">
-             <Image src="/images/hero_cinematic.jpg" alt="Cameraman" fill style={{ objectFit: 'cover' }} />
-          </div>
-        </div>
-      </section>
 
     </main>
   );

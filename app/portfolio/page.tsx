@@ -1,70 +1,414 @@
 'use client';
-
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function PortfolioPage() {
-  const [activeTab, setActiveTab] = useState('All');
-
-  const portfolioItems = [
-    { id: 1, category: 'Social Media', src: '/images/storyteller.jpg', title: 'Studio Storyteller', meta: 'f/4.0 · 35mm' },
-    { id: 2, category: 'Events', src: '/images/blog_wedding.jpg', title: 'Outdoor Event Coverage', meta: 'f/2.0 · 24mm' },
-    { id: 3, category: 'Corporate', src: '/images/blog_corporate.jpg', title: 'Corporate Team', meta: 'f/2.8 · 50mm' },
-    { id: 4, category: 'Product', src: '/images/professional_lens.jpg', title: 'Cinema Prime Detail', meta: 'f/2.8 · 85mm' },
-    { id: 5, category: 'Real Estate', src: '/images/blog_lighting.jpg', title: 'Golden Hour Silhouette', meta: 'f/1.8 · 35mm' },
-    { id: 6, category: 'Corporate', src: '/images/hero_poster.jpg', title: 'Brand Film Frame', meta: 'f/5.6 · 24mm' },
-  ];
-
-  const filteredItems = activeTab === 'All' ? portfolioItems : portfolioItems.filter(item => item.category === activeTab);
+  const [nicheTab, setNicheTab] = useState('inspiration'); 
 
   return (
-    <main id="top" className="page-main">
-      {/* PAGE HERO */}
-      <section className="page-hero">
-        <div className="wrap page-hero__inner">
-          <span className="eyebrow">— OUR PORTFOLIO</span>
-          <h1 className="hero__title">
-            <span className="line"><span>Fresh from the</span></span><br/>
-            <span className="line"><span><span className="u-blue">Field</span>.</span></span>
-          </h1>
-          <p className="hero__sub">A living feed of our most recent work — straight off the memory card.</p>
-        </div>
-      </section>
-
-      {/* PORTFOLIO GRID */}
-      <section className="page-section wrap">
-        {/* Filters */}
-        <div className="portfolio-filters reveal">
-          {['All', 'Social Media', 'Events', 'Corporate', 'Real Estate', 'Product'].map((tab) => (
-            <button 
-              key={tab} 
-              className={`filter-btn ${activeTab === tab ? 'is-active' : ''}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid */}
-        <div className="portfolio-gallery">
-          {filteredItems.map((item, index) => (
-            <figure key={item.id} className="pf reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-              <img className="shot" src={item.src} alt={item.title} />
-              <div className="pf__overlay">
-                <span className="pf__cat">{item.category}</span>
-                <span className="pf__title">{item.title}</span>
+    <main id="top" className="page-main pf-page">
+      {/* 1. HERO */}
+      <section className="pf-hero wrap page-section">
+        <div className="pf-hero__inner">
+          <div className="pf-hero__content">
+            <span className="pf-hero__badge">WORK SHOWCASE</span>
+            <h1 className="pf-hero__title">
+              We've Been<br/>
+              Busy Behind the<br/>
+              <span className="u-coral u-italic">Camera.</span>
+            </h1>
+            <p className="pf-hero__sub">From restaurant kitchens and factory floors to creators, products, properties and brand campaigns — here's what CAAS has been capturing lately.</p>
+            
+            <div className="pf-stats">
+              <div className="pf-stat">
+                <h3>500+</h3>
+                <span>SUCCESSFUL SHOOTS</span>
               </div>
-              <figcaption className="pf__cap">{item.meta}</figcaption>
-            </figure>
-          ))}
-        </div>
+              <div className="pf-stat">
+                <h3>12k+</h3>
+                <span>HOURS FILMED</span>
+              </div>
+              <div className="pf-stat">
+                <h3>98%</h3>
+                <span>CLIENT RETENTION</span>
+              </div>
+            </div>
 
-        <div className="portfolio-cta reveal" style={{ marginTop: '60px', textAlign: 'center' }}>
-          <h3>Want similar results for your brand?</h3>
-          <br/>
-          <a href="/pricing" className="btn btn--coral btn--lg">Book a Shoot Today</a>
+            <div className="pf-tabs">
+              <button className="pf-tab is-active">ALL WORK</button>
+              <button className="pf-tab">VIDEO</button>
+              <button className="pf-tab">PHOTOGRAPHY</button>
+              <button className="pf-tab">COMMERCIAL</button>
+              <button className="pf-tab">EDITORIAL</button>
+            </div>
+          </div>
+          <div className="pf-hero__image-wrap">
+            <div className="pf-hero__image">
+              <img src="/images/storyteller.jpg" alt="Camera Operator" />
+            </div>
+            <p className="pf-hero__hint">btw we know the editing part too</p>
+          </div>
         </div>
       </section>
+
+      {/* 2. NICHE / INSPIRATION TOGGLE */}
+      <section className="pf-niche wrap page-section">
+        <div className="pf-niche__head text-center">
+          <h2 className="pf-niche__headline">
+            <span className="u-cyan">Great shoots</span> don't just happen.<br/>
+            The <span className="u-coral u-italic">Camera</span> is only one part of the job.<br/>
+            Here's what happens behind the scenes to<br/>
+            make them happen & <span className="u-cyan u-italic">Deliver Results.</span>
+          </h2>
+          
+          <p className="pf-niche__btw">btw What brings you here?</p>
+          
+          <div className="pf-toggle-wrap">
+            <div className="pf-toggle">
+              <button 
+                className={`pf-toggle__btn ${nicheTab === 'inspiration' ? 'is-active' : ''}`} 
+                onClick={() => setNicheTab('inspiration')}
+              >
+                I'M HERE FOR INSPIRATION
+              </button>
+              <button 
+                className={`pf-toggle__btn ${nicheTab === 'mind' ? 'is-active' : ''}`} 
+                onClick={() => setNicheTab('mind')}
+              >
+                I HAVE A SHOOT IN MIND
+              </button>
+            </div>
+            <div className="pf-toggle__subs">
+              <span className={nicheTab === 'inspiration' ? 'is-active' : ''}>Show me what CAAS can create.</span>
+              <span className={nicheTab === 'mind' ? 'is-active' : ''}>Let's turn the idea into a shoot.</span>
+            </div>
+          </div>
+          
+          <h3 className="pf-niche__title u-coral">Specific Niche in Mind?</h3>
+        </div>
+
+        <div className="pf-niche-grid">
+          {/* Card 1 */}
+          <div className="pf-niche-card">
+            <div className="pf-niche-card__img">
+              <span className="pf-badge pf-badge--dark">FASHION</span>
+              <img src="/images/blog_corporate.jpg" alt="Business" />
+            </div>
+            <div className="pf-niche-card__content">
+              <h4 className="u-cyan">BUSINESS & SPACES</h4>
+              <p>For businesses where the place, people or process tell the story.</p>
+              <ul className="pf-niche-list">
+                <li><span className="icon">🏠</span> Real Estate Shoot</li>
+                <li><span className="icon">🏥</span> Healthcare Shoot</li>
+                <li><span className="icon">🏭</span> Manufacturing Shoot</li>
+                <li><span className="icon">🎓</span> Education Shoot</li>
+                <li><span className="icon">🏢</span> Corporate Shoot</li>
+                <li><span className="icon">🏨</span> Hotel & Hospitality Shoot</li>
+              </ul>
+              <div className="pf-niche-footer">
+                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+              </div>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="pf-niche-card">
+            <div className="pf-niche-card__img">
+              <span className="pf-badge pf-badge--cyan">FEATURED</span>
+              <img src="/images/professional_lens.jpg" alt="Apple" />
+            </div>
+            <div className="pf-niche-card__content">
+              <h4 className="u-cyan">PEOPLE & PERSONAL BRANDS</h4>
+              <p>For people who are the content.</p>
+              <ul className="pf-niche-list">
+                <li><span className="icon">🎙️</span> Podcast Shoot</li>
+                <li><span className="icon">🏋️</span> Gym & Fitness Shoot</li>
+                <li><span className="icon">📱</span> Influencer Shoot</li>
+                <li><span className="icon">👠</span> Model Shoot</li>
+                <li><span className="icon">🎬</span> Creator Shoot</li>
+                <li><span className="icon">🖊️</span> Personal Branding Shoot</li>
+              </ul>
+              <div className="pf-niche-footer">
+                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+              </div>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="pf-niche-card">
+            <div className="pf-niche-card__img">
+              <span className="pf-badge pf-badge--dark">RESTAURANT</span>
+              <img src="/images/blog_wedding.jpg" alt="Restaurant" />
+            </div>
+            <div className="pf-niche-card__content">
+              <h4 className="u-cyan">EVENTS & EXPERIENCES</h4>
+              <p>For moments where everything happens once—and the camera can't miss it.</p>
+              <ul className="pf-niche-list">
+                <li><span className="icon">🎉</span> Corporate Event</li>
+                <li><span className="icon">🎪</span> Exhibition</li>
+                <li><span className="icon">🎤</span> Brand Event</li>
+                <li><span className="icon">🛍️</span> Store Launch</li>
+                <li><span className="icon">🚀</span> Product Launch</li>
+                <li><span className="icon">🎟️</span> Promotional Event</li>
+              </ul>
+              <div className="pf-niche-footer">
+                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+              </div>
+            </div>
+          </div>
+          {/* Card 4 */}
+          <div className="pf-niche-card">
+            <div className="pf-niche-card__img">
+              <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
+              <img src="/images/hero_poster.jpg" alt="Car" />
+            </div>
+            <div className="pf-niche-card__content">
+              <h4 className="u-cyan">PRODUCTS & BRANDS</h4>
+              <p>For things that need to look as good on camera as they do in real life.</p>
+              <ul className="pf-niche-list">
+                <li><span className="icon">📦</span> Product Shoot</li>
+                <li><span className="icon">☕</span> Cafe Shoot</li>
+                <li><span className="icon">🛒</span> E-Commerce Shoot</li>
+                <li><span className="icon">🚗</span> Automobile Shoot</li>
+                <li><span className="icon">🍽️</span> Restaurant Shoot</li>
+                <li><span className="icon">👗</span> Fashion Shoot</li>
+              </ul>
+              <div className="pf-niche-footer">
+                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center" style={{ marginTop: '48px' }}>
+          <button className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '12px 32px' }}>See What Lens Delivers</button>
+        </div>
+      </section>
+
+      {/* 3. EXPERTISE SECTION (Dark) */}
+      <section className="pf-expertise dark">
+        <div className="wrap">
+          <div className="pf-expertise__head">
+            <div className="left">
+              <h2 className="u-cyan">Expertise Comes With On-Field Execution,</h2>
+              <p>We don't just point and shoot. We understand the specific nuances, lighting requirements, and audience expectations of your niche.</p>
+            </div>
+            <div className="right">
+              <Link href="/services" className="link-cyan">View All Services &gt;</Link>
+            </div>
+          </div>
+          
+          <div className="pf-icon-boxes">
+            <div className="pf-icon-box">
+              <span className="icon">🍴</span>
+              <span>RESTAURANT</span>
+            </div>
+            <div className="pf-icon-box">
+              <span className="icon">🏢</span>
+              <span>CORPORATE</span>
+            </div>
+            <div className="pf-icon-box">
+              <span className="icon">💻</span>
+              <span>TECH</span>
+            </div>
+            <div className="pf-icon-box">
+              <span className="icon">🏠</span>
+              <span>REAL ESTATE</span>
+            </div>
+            <div className="pf-icon-box">
+              <span className="icon">👕</span>
+              <span>FASHION</span>
+            </div>
+            <div className="pf-icon-box">
+              <span className="icon">📅</span>
+              <span>EVENTS</span>
+            </div>
+          </div>
+
+          <div className="pf-expertise__text text-center">
+            <p>Just like chefs have their cuisine specialty, cameramen have their lens specialty.</p>
+            <p className="u-italic">
+              A pastry chef isn't expected to master a Tandoor.<br/>
+              Likewise, a product shoot needs a different eye than a real estate shoot.
+            </p>
+            <p>That's why our cameramen specialize in the kind of shoots they know best.</p>
+          </div>
+        </div>
+        
+        {/* Curved area inside dark section */}
+        <div className="pf-curve">
+           <div className="pf-avatars">
+              {/* Fake avatars for the demo */}
+              <div className="pf-avatar-card">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
+              </div>
+              <div className="pf-avatar-card">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
+              </div>
+              <div className="pf-avatar-card">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
+              </div>
+              <div className="pf-avatar-card" style={{ marginTop: '-40px' }}>
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" className="lg" />
+              </div>
+              <div className="pf-avatar-card">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
+              </div>
+              <div className="pf-avatar-card">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
+              </div>
+           </div>
+           <h2 className="pf-curve__title text-center">Latest Client Feedback for<br/><span className="u-cyan u-italic">Our Masters</span></h2>
+        </div>
+      </section>
+
+      {/* 4. THE 3500 CONCEPT (Cyan) */}
+      <section className="pf-concept">
+        <div className="wrap">
+          <div className="pf-concept__header text-center">
+            <h2>The <span className="u-red">₹3500</span> Concept</h2>
+            <p>Professional camera. Real results. Fixed start. Flexible beyond.</p>
+          </div>
+          
+          <div className="pf-concept__grid">
+            <div className="pf-concept__left">
+              {/* Pricing Card Replica */}
+              <div className="pf-price-card">
+                <div className="stars">★★★★★</div>
+                <div className="pkg">STARTING PACKAGE</div>
+                <div className="price">₹3500</div>
+                <div className="title">CAMERAMAN FOR A DAY (5 HOURS)</div>
+                <p>5 hours of professional shooting with an experienced cameraman.</p>
+                <div className="addon">
+                  <div className="icon">🕒</div>
+                  <div className="info">
+                    <strong>Need More Time?</strong>
+                    <div className="u-cyan price">₹500 <span className="small">/ Extra Hour</span></div>
+                    <p className="small">Extend as per your requirement. You only pay for what you need.</p>
+                  </div>
+                </div>
+                <div className="note">
+                  <span className="icon">ℹ️</span>
+                  <span><span className="u-cyan">Note:</span> Equipment, travel, and other add-ons will be as per requirement.</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="pf-concept__right">
+              <h2>Shoot what moves your world.<br/>We capture it, <span className="u-white u-italic">perfectly.</span></h2>
+              <p>From content that connects to events that matter, we've got your shoot covered.</p>
+              
+              <div className="pf-features-grid">
+                <div className="f-box">
+                  <div className="f-icon">📱</div>
+                  <strong>Social Media Content</strong>
+                  <span>Reels, Shorts, Posts & more</span>
+                </div>
+                <div className="f-box">
+                  <div className="f-icon">📅</div>
+                  <strong>Event Coverage</strong>
+                  <span>Birthdays, Functions, Corporate & more</span>
+                  <span className="sub">*Photo & video pricing differs</span>
+                </div>
+                <div className="f-box">
+                  <div className="f-icon">👤</div>
+                  <strong>Influencer Shoots</strong>
+                  <span>Lifestyle, Fashion, Collabs & more</span>
+                </div>
+                <div className="f-box">
+                  <div className="f-icon">💼</div>
+                  <strong>Business Shoots</strong>
+                  <span>Offices, Products, Brand Stories & more</span>
+                </div>
+              </div>
+
+              <div className="pf-concept__ctas">
+                <button className="btn btn--white"><span className="icon">📅</span> Book a Shoot</button>
+                <button className="btn btn--ghost-white"><span className="icon">🎧</span> Contact Us Now!</button>
+              </div>
+              <p className="pf-trusted">
+                <span className="icon">🛡️</span> Trusted professionals. On-time delivery. Hassle-free experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. DONT JUST OVERSPEND */}
+      <section className="pf-guide wrap page-section">
+        <h2 className="pf-guide__title">
+          <span className="u-cyan">Dont Just Overspend,</span><br/>
+          <span className="u-italic" style={{ color: 'var(--ink)' }}>Check out the User Guide to get the correct shoot planned</span>
+        </h2>
+
+        <div className="pf-guide-cards">
+          <div className="pf-guide-card">
+            <h3>Implementation</h3>
+            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
+            <img src="/images/blog_corporate.jpg" alt="" />
+          </div>
+          <div className="pf-guide-card dark">
+            <h3>Implementation</h3>
+            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
+            <img src="/images/blog_corporate.jpg" alt="" />
+          </div>
+          <div className="pf-guide-card">
+            <h3>Implementation</h3>
+            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
+            <img src="/images/blog_corporate.jpg" alt="" />
+          </div>
+        </div>
+
+        <div className="pf-glance">
+          <div className="pf-glance__text">
+            <h3 className="u-cyan u-italic">Last Week at Glance</h3>
+            <p className="u-italic" style={{ color: 'var(--ink)', fontWeight: 600 }}>showing up with intent is only thing<br/>that matters</p>
+          </div>
+          <div className="pf-glance__circles">
+            <div className="circle"><span className="icon">🖼️</span></div>
+            <div className="circle"><span className="icon">🖼️</span></div>
+            <div className="circle"><span className="icon">🖼️</span></div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. BEHIND THE SCENES */}
+      <section className="pf-bts dark">
+        <div className="pf-bts__bg">
+          <img src="/images/professional_lens.jpg" alt="Camera Rig" />
+        </div>
+        <div className="pf-bts__content wrap">
+          <span className="pf-bts__eyebrow">— BEHIND THE SCENES</span>
+          <h2>Crafting premium<br/>narratives<br/>through cinema-<br/>grade lenses.</h2>
+          <button className="btn btn--cyan">▷ WATCH REEL 2024</button>
+        </div>
+      </section>
+
+      {/* 7. SURFING WEBSITES */}
+      <section className="pf-surf page-section text-center">
+        <div className="wrap">
+          <h2 className="u-italic" style={{ color: 'var(--ink)' }}>
+            Surfing Websites and Reaching out to Random<br/>
+            Connections won't solve your problem ...
+          </h2>
+          <p>Join 200+ brands using CAAS to produce high-end content at scale.<br/>Book your first 6-hour session today.</p>
+          <div className="pf-surf__ctas">
+            <button className="btn btn--white">BOOK A SHOOT NOW</button>
+            <button className="btn btn--ghost-dark">VIEW PRICING</button>
+          </div>
+        </div>
+      </section>
+
+      {/* BIG FOOTER EXTENSION */}
+      <div className="pf-big-footer">
+        <h1>CAAS</h1>
+        <p className="u-italic">Cameraman as a Service</p>
+      </div>
+
     </main>
   );
 }

@@ -9,8 +9,8 @@ export default function Footer() {
             <img src="/images/logo_ondark.png" alt="CAAS logo" className="footer__logo"/>
           </Link>
           <nav className="footer__links" aria-label="Footer">
-            <Link href="/about">About Us</Link>
-            <Link href="/services">Services</Link>
+            <Link href="/knowledge-centre">Knowledge Centre</Link>
+            <Link href="/industries">Industries</Link>
             <Link href="/portfolio">Portfolio</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/privacy">Privacy Policy</Link>

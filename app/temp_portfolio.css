@@ -1,0 +1,157 @@
+/* ============================================================
+   PORTFOLIO PAGE (pf-)
+   ============================================================ */
+
+/* 1. HERO */
+.pf-hero { padding-top: 140px; }
+.pf-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.pf-hero__badge { display: inline-block; padding: 4px 12px; border: 1px solid var(--cyan-ink); color: var(--cyan-ink); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 24px; border-radius: 4px; text-transform: uppercase; }
+.pf-hero__title { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 24px; color: var(--ink); font-family: var(--display); letter-spacing: -0.02em; }
+.pf-hero__sub { font-size: 1.1rem; color: var(--muted); max-width: 480px; margin-bottom: 40px; }
+.pf-stats { display: flex; gap: 48px; margin-bottom: 48px; }
+.pf-stat h3 { font-size: 2.5rem; color: var(--ink); margin-bottom: 4px; font-family: var(--display); }
+.pf-stat span { font-size: 0.75rem; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
+
+.pf-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.pf-tab { padding: 12px 24px; border: 1px solid var(--line); border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: var(--muted); background: transparent; transition: all 0.2s; cursor: pointer; }
+.pf-tab:hover { border-color: var(--cyan-ink); color: var(--cyan-ink); }
+.pf-tab.is-active { background: var(--cyan-ink); color: #fff; border-color: var(--cyan-ink); }
+
+.pf-hero__image-wrap { position: relative; }
+.pf-hero__image { width: 100%; border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.15); }
+.pf-hero__image img { width: 100%; height: 100%; object-fit: cover; }
+.pf-hero__hint { text-align: right; margin-top: 16px; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+
+/* 2. NICHE & TOGGLE */
+.pf-niche { padding-block: 100px; }
+.pf-niche__headline { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 32px; }
+.pf-niche__btw { font-size: 1.2rem; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
+
+.pf-toggle-wrap { display: flex; flex-direction: column; align-items: center; margin-bottom: 80px; }
+.pf-toggle { display: inline-flex; border: 1px solid var(--cyan-ink); border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
+.pf-toggle__btn { padding: 12px 24px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: var(--cyan-ink); background: transparent; transition: all 0.2s; cursor: pointer; }
+.pf-toggle__btn.is-active { background: var(--cyan-ink); color: #fff; }
+.pf-toggle__subs { display: flex; flex-direction: column; font-size: 0.95rem; color: var(--muted); align-items: center; }
+.pf-toggle__subs span { display: none; }
+.pf-toggle__subs span.is-active { display: block; }
+
+.pf-niche__title { font-size: 2rem; margin-bottom: 48px; }
+
+.pf-niche-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.pf-niche-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: transform 0.3s; }
+.pf-niche-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.pf-niche-card__img { position: relative; aspect-ratio: 16/9; }
+.pf-niche-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.pf-badge { position: absolute; top: 16px; left: 16px; padding: 4px 12px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; z-index: 2; letter-spacing: 0.05em; }
+.pf-badge--dark { background: var(--ink); color: #fff; }
+.pf-badge--cyan { background: var(--cyan-ink); color: #fff; }
+
+.pf-niche-card__content { padding: 32px; }
+.pf-niche-card__content h4 { font-size: 1.25rem; margin-bottom: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+.pf-niche-card__content p { color: var(--muted); font-size: 0.95rem; margin-bottom: 24px; }
+
+.pf-niche-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; margin-bottom: 32px; padding: 0; }
+.pf-niche-list li { font-size: 0.85rem; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+
+.pf-niche-footer { display: flex; gap: 12px; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; border-top: 1px solid var(--line); padding-top: 24px; font-family: var(--mono); }
+
+/* 3. EXPERTISE */
+.pf-expertise { padding-top: 100px; background: var(--ink); color: #fff; border-radius: 0 0 50% 50% / 0 0 8vw 8vw; padding-bottom: 120px; position: relative; z-index: 2; }
+.pf-expertise__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 64px; }
+.pf-expertise__head h2 { font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--cyan-bright); margin-bottom: 16px; line-height: 1.2; }
+.pf-expertise__head p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 500px; }
+
+.pf-icon-boxes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-bottom: 80px; }
+.pf-icon-box { background: #fff; color: var(--ink); border-radius: 16px; padding: 32px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.pf-icon-box .icon { font-size: 2rem; }
+.pf-icon-box span:not(.icon) { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; }
+
+.pf-expertise__text { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: 24px; }
+
+/* CURVE AND AVATARS */
+.pf-curve { position: relative; z-index: 2; margin-top: -40px; }
+.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
+.pf-avatar-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.pf-avatar-card .name { background: #fff; color: var(--ink); font-size: 0.7rem; font-weight: 700; padding: 8px 12px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.pf-avatar-card img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid var(--ink); }
+.pf-avatar-card img.lg { width: 96px; height: 96px; }
+.pf-curve__title { font-size: clamp(2rem, 4vw, 3rem); color: #fff; }
+
+/* 4. THE 3500 CONCEPT */
+.pf-concept { background: var(--cyan-bright); padding: 160px 0 100px; margin-top: -100px; z-index: 1; position: relative; color: var(--ink); }
+.pf-concept__header h2 { font-size: 3rem; margin-bottom: 8px; color: var(--ink); }
+.pf-concept__header p { font-size: 1.2rem; font-weight: 500; margin-bottom: 64px; }
+
+.pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.pf-price-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); color: var(--ink); }
+.pf-price-card .stars { color: var(--cyan-ink); font-size: 1.2rem; margin-bottom: 8px; }
+.pf-price-card .pkg { font-size: 0.75rem; font-weight: 700; color: var(--cyan-ink); margin-bottom: 16px; letter-spacing: 0.1em; }
+.pf-price-card .price { font-size: 4rem; font-weight: 800; font-family: var(--display); line-height: 1; color: var(--coral); margin-bottom: 16px; }
+.pf-price-card .title { font-weight: 700; margin-bottom: 8px; font-size: 1.2rem; }
+.pf-price-card hr { margin: 24px 0; border: none; border-top: 1px solid var(--line); }
+.pf-price-card .addon { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
+.pf-price-card .addon .icon { font-size: 1.5rem; background: rgba(0,0,0,0.03); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.pf-price-card .addon .price { font-size: 1.2rem; font-family: var(--body); margin: 4px 0; color: var(--cyan-ink); font-weight: 700; }
+.pf-price-card .addon .small { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
+.pf-price-card .note { display: flex; gap: 8px; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 8px; font-size: 0.85rem; align-items: center; }
+
+.pf-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 48px 0; }
+.pf-features-grid .f-box { display: flex; flex-direction: column; gap: 4px; }
+.pf-features-grid .f-icon { font-size: 2rem; margin-bottom: 12px; background: rgba(255,255,255,0.2); width: 64px; height: 64px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.pf-concept__ctas { display: flex; gap: 16px; margin-bottom: 24px; }
+.btn--white { background: #fff; color: var(--ink); border: 1.5px solid #fff; }
+.btn--ghost-white { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+.pf-trusted { font-size: 0.85rem; color: var(--ink); opacity: 0.8; display: flex; align-items: center; gap: 8px; }
+
+/* 5. GUIDE CARDS */
+.pf-guide { padding-block: 100px; }
+.pf-guide__title { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 48px; }
+.pf-guide-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
+.pf-guide-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 24px; }
+.pf-guide-card.dark { background: var(--ink); color: #fff; }
+.pf-guide-card h3 { font-size: 1.25rem; }
+.pf-guide-card p { font-size: 0.95rem; color: var(--muted); flex: 1; line-height: 1.6; }
+.pf-guide-card.dark p { color: rgba(255,255,255,0.7); }
+.pf-guide-card img { width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover; }
+
+.pf-glance { display: flex; align-items: center; gap: 40px; }
+.pf-glance__text h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.pf-glance__circles { display: flex; gap: 16px; }
+.pf-glance__circles .circle { width: 100px; height: 100px; border-radius: 50%; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--muted); }
+
+/* 6. BTS */
+.pf-bts { position: relative; padding: 120px 0; min-height: 600px; display: flex; align-items: center; }
+.pf-bts__bg { position: absolute; inset: 0; z-index: 0; }
+.pf-bts__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+.pf-bts__content { position: relative; z-index: 1; }
+.pf-bts__eyebrow { color: #fff; letter-spacing: 0.2em; font-size: 0.8rem; font-family: var(--mono); }
+.pf-bts__content h2 { font-size: clamp(3rem, 5vw, 4.5rem); margin: 24px 0 40px; color: #fff; line-height: 1.1; }
+
+/* 7. SURFING */
+.pf-surf { padding-block: 120px; background: var(--cyan-bright); }
+.pf-surf h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 24px; color: var(--ink); }
+.pf-surf p { font-size: 1.2rem; margin-bottom: 40px; color: var(--ink); }
+.pf-surf__ctas { display: flex; justify-content: center; gap: 16px; }
+.btn--ghost-dark { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+
+/* 8. BIG FOOTER */
+.pf-big-footer { background: var(--cyan-bright); padding: 80px 20px; text-align: center; }
+.pf-big-footer h1 { font-size: clamp(6rem, 20vw, 15rem); color: var(--ink); line-height: 0.8; letter-spacing: -0.05em; font-family: var(--display); }
+.pf-big-footer p { font-size: clamp(1.5rem, 3vw, 2.5rem); font-family: var(--serif); color: var(--ink); margin-top: -10px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pf-hero__inner { grid-template-columns: 1fr; }
+  .pf-niche-grid { grid-template-columns: 1fr; }
+  .pf-niche-list { grid-template-columns: 1fr; }
+  .pf-expertise__head { flex-direction: column; align-items: flex-start; }
+  .pf-icon-boxes { grid-template-columns: repeat(3, 1fr); }
+  .pf-concept__grid { grid-template-columns: 1fr; }
+  .pf-guide-cards { grid-template-columns: 1fr; }
+  .pf-glance { flex-direction: column; text-align: center; }
+  .pf-expertise { border-radius: 0 0 50% 50% / 0 0 5vw 5vw; }
+}
+@media (max-width: 600px) {
+  .pf-icon-boxes { grid-template-columns: repeat(2, 1fr); }
+  .pf-stats { flex-direction: column; gap: 24px; }
+}
