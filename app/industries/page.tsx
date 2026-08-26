@@ -148,7 +148,7 @@ export default function ServicesPage() {
           {/* Top Row: 2 large cards */}
           <div className="bento-card bento-card--large reveal d1">
             <div className="bento-card__img">
-              <Image src="/images/professional_lens.jpg" alt="Real Estate" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/ind_real_estate.jpg" alt="Real Estate" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
@@ -161,7 +161,7 @@ export default function ServicesPage() {
 
           <div className="bento-card bento-card--large reveal d2">
             <div className="bento-card__img">
-              <Image src="/images/professional_lens.jpg" alt="Manufacturing" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/ind_manufacturing.jpg" alt="Manufacturing" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
@@ -179,7 +179,7 @@ export default function ServicesPage() {
           {/* Middle Row: 3 small cards */}
           <div className="bento-card bento-card--small reveal d4">
             <div className="bento-card__img">
-              <Image src="/images/professional_lens.jpg" alt="Influencers" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/ind_influencers.jpg" alt="Influencers" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
@@ -196,7 +196,7 @@ export default function ServicesPage() {
 
           <div className="bento-card bento-card--small reveal d5">
             <div className="bento-card__img">
-              <Image src="/images/professional_lens.jpg" alt="Personal Branding" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/ind_product.jpg" alt="Personal Branding" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
@@ -213,7 +213,7 @@ export default function ServicesPage() {
 
           <div className="bento-card bento-card--small reveal d6">
             <div className="bento-card__img">
-              <Image src="/images/professional_lens.jpg" alt="Food & Restaurant" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/ind_food.jpg" alt="Food & Restaurant" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
@@ -310,9 +310,9 @@ export default function ServicesPage() {
               <div className="niche-item__box">Office Party & MEET UPS</div>
             </div>
           </div>
-          <div className="niche-diagram__footer" style={{ position: 'static', margin: '40px auto 0', transform: 'none', color: 'var(--text)' }}>
-            It all Starts with Shoot<br/>&<br/><span className="u-cyan">Ends with Planning for Next</span>
-          </div>
+        </div>
+        <div className="niche-diagram__footer reveal" style={{ position: 'static', margin: '40px auto 0', transform: 'none', color: 'var(--text)' }}>
+          It all Starts with Shoot<br/>&<br/><span className="u-cyan">Ends with Planning for Next</span>
         </div>
       </section>
 
@@ -526,16 +526,16 @@ export default function ServicesPage() {
         
         <div className="gallery-grid reveal d2">
           <div className="gallery-img">
-             <Image src="/images/professional_lens.jpg" alt="Gallery 1" fill style={{ objectFit: 'cover' }} />
+             <Image src="/images/ind_event.jpg" alt="Gallery 1" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="gallery-img">
              <Image src="/images/hero_cinematic.jpg" alt="Gallery 2" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="gallery-img">
-             <Image src="/images/professional_lens.jpg" alt="Gallery 3" fill style={{ objectFit: 'cover' }} />
+             <Image src="/images/ind_cinema.jpg" alt="Gallery 3" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="gallery-img">
-             <Image src="/images/hero_cinematic.jpg" alt="Gallery 4" fill style={{ objectFit: 'cover' }} />
+             <Image src="/images/ind_drone.jpg" alt="Gallery 4" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
 

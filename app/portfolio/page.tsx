@@ -10,7 +10,7 @@ export default function PortfolioPage() {
       {/* 1. HERO */}
       <section className="pf-hero wrap page-section">
         <div className="pf-hero__inner">
-          <div className="pf-hero__content">
+          <div className="pf-hero__content reveal">
             <span className="pf-hero__badge">WORK SHOWCASE</span>
             <h1 className="pf-hero__title">
               We've Been<br/>
@@ -34,15 +34,9 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            <div className="pf-tabs">
-              <button className="pf-tab is-active">ALL WORK</button>
-              <button className="pf-tab">VIDEO</button>
-              <button className="pf-tab">PHOTOGRAPHY</button>
-              <button className="pf-tab">COMMERCIAL</button>
-              <button className="pf-tab">EDITORIAL</button>
-            </div>
+
           </div>
-          <div className="pf-hero__image-wrap">
+          <div className="pf-hero__image-wrap reveal d1">
             <div className="pf-hero__image">
               <img src="/images/storyteller.jpg" alt="Camera Operator" />
             </div>
@@ -53,7 +47,7 @@ export default function PortfolioPage() {
 
       {/* 2. NICHE / INSPIRATION TOGGLE */}
       <section className="pf-niche wrap page-section">
-        <div className="pf-niche__head text-center">
+        <div className="pf-niche__head text-center reveal">
           <h2 className="pf-niche__headline">
             <span className="u-cyan">Great shoots</span> don't just happen.<br/>
             The <span className="u-coral u-italic">Camera</span> is only one part of the job.<br/>
@@ -89,7 +83,7 @@ export default function PortfolioPage() {
 
         <div className="pf-niche-grid">
           {/* Card 1 */}
-          <div className="pf-niche-card">
+          <div className="pf-niche-card reveal">
             <div className="pf-niche-card__img">
               <span className="pf-badge pf-badge--dark">FASHION</span>
               <img src="/images/blog_corporate.jpg" alt="Business" />
@@ -111,10 +105,10 @@ export default function PortfolioPage() {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="pf-niche-card">
+          <div className="pf-niche-card reveal d1">
             <div className="pf-niche-card__img">
               <span className="pf-badge pf-badge--cyan">FEATURED</span>
-              <img src="/images/professional_lens.jpg" alt="Apple" />
+              <img src="/images/ind_product.jpg" alt="Apple" />
             </div>
             <div className="pf-niche-card__content">
               <h4 className="u-cyan">PEOPLE & PERSONAL BRANDS</h4>
@@ -133,7 +127,7 @@ export default function PortfolioPage() {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="pf-niche-card">
+          <div className="pf-niche-card reveal">
             <div className="pf-niche-card__img">
               <span className="pf-badge pf-badge--dark">RESTAURANT</span>
               <img src="/images/blog_wedding.jpg" alt="Restaurant" />
@@ -155,7 +149,7 @@ export default function PortfolioPage() {
             </div>
           </div>
           {/* Card 4 */}
-          <div className="pf-niche-card">
+          <div className="pf-niche-card reveal d1">
             <div className="pf-niche-card__img">
               <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
               <img src="/images/hero_poster.jpg" alt="Car" />
@@ -185,7 +179,7 @@ export default function PortfolioPage() {
 
       {/* 3. EXPERTISE SECTION (Dark) */}
       <section className="pf-expertise dark">
-        <div className="wrap">
+        <div className="wrap reveal">
           <div className="pf-expertise__head">
             <div className="left">
               <h2 className="u-cyan">Expertise Comes With On-Field Execution,</h2>
@@ -198,27 +192,27 @@ export default function PortfolioPage() {
           
           <div className="pf-icon-boxes">
             <div className="pf-icon-box">
-              <span className="icon">🍴</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>
               <span>RESTAURANT</span>
             </div>
             <div className="pf-icon-box">
-              <span className="icon">🏢</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></span>
               <span>CORPORATE</span>
             </div>
             <div className="pf-icon-box">
-              <span className="icon">💻</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span>
               <span>TECH</span>
             </div>
             <div className="pf-icon-box">
-              <span className="icon">🏠</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
               <span>REAL ESTATE</span>
             </div>
             <div className="pf-icon-box">
-              <span className="icon">👕</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></span>
               <span>FASHION</span>
             </div>
             <div className="pf-icon-box">
-              <span className="icon">📅</span>
+              <span className="icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
               <span>EVENTS</span>
             </div>
           </div>
@@ -264,13 +258,13 @@ export default function PortfolioPage() {
       {/* 4. THE 3500 CONCEPT (Cyan) */}
       <section className="pf-concept">
         <div className="wrap">
-          <div className="pf-concept__header text-center">
+          <div className="pf-concept__header text-center reveal">
             <h2>The <span className="u-red">₹3500</span> Concept</h2>
             <p>Professional camera. Real results. Fixed start. Flexible beyond.</p>
           </div>
           
           <div className="pf-concept__grid">
-            <div className="pf-concept__left">
+            <div className="pf-concept__left reveal">
               {/* Pricing Card Replica */}
               <div className="pf-price-card">
                 <div className="stars">★★★★★</div>
@@ -293,7 +287,7 @@ export default function PortfolioPage() {
               </div>
             </div>
             
-            <div className="pf-concept__right">
+            <div className="pf-concept__right reveal d1">
               <h2>Shoot what moves your world.<br/>We capture it, <span className="u-white u-italic">perfectly.</span></h2>
               <p>From content that connects to events that matter, we've got your shoot covered.</p>
               
@@ -341,7 +335,7 @@ export default function PortfolioPage() {
         </h2>
 
         <div className="pf-guide-cards">
-          <div className="pf-guide-card">
+          <div className="pf-guide-card reveal">
             <h3>Implementation</h3>
             <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
             <img src="/images/blog_corporate.jpg" alt="" />
@@ -351,14 +345,14 @@ export default function PortfolioPage() {
             <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
             <img src="/images/blog_corporate.jpg" alt="" />
           </div>
-          <div className="pf-guide-card">
+          <div className="pf-guide-card reveal">
             <h3>Implementation</h3>
             <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
             <img src="/images/blog_corporate.jpg" alt="" />
           </div>
         </div>
 
-        <div className="pf-glance">
+        <div className="pf-glance reveal">
           <div className="pf-glance__text">
             <h3 className="u-cyan u-italic">Last Week at Glance</h3>
             <p className="u-italic" style={{ color: 'var(--ink)', fontWeight: 600 }}>showing up with intent is only thing<br/>that matters</p>
@@ -374,9 +368,9 @@ export default function PortfolioPage() {
       {/* 6. BEHIND THE SCENES */}
       <section className="pf-bts dark">
         <div className="pf-bts__bg">
-          <img src="/images/professional_lens.jpg" alt="Camera Rig" />
+          <img src="/images/ind_camera_rig.jpg" alt="Camera Rig" />
         </div>
-        <div className="pf-bts__content wrap">
+        <div className="pf-bts__content wrap reveal">
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
             <div style={{ width: '40px', height: '2px', background: 'var(--cyan-bright)' }}></div>
             <span className="pf-bts__eyebrow" style={{ margin: 0 }}>BEHIND THE SCENES</span>
@@ -391,7 +385,7 @@ export default function PortfolioPage() {
 
       {/* 7. SURFING WEBSITES */}
       <section className="pf-surf page-section text-center">
-        <div className="wrap">
+        <div className="wrap reveal">
           <h2 className="u-italic" style={{ color: 'var(--ink)' }}>
             Surfing Websites and Reaching out to Random<br/>
             Connections won't solve your problem ...
@@ -404,11 +398,6 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* BIG FOOTER EXTENSION */}
-      <div className="pf-big-footer">
-        <h1>CAAS</h1>
-        <p className="u-italic">Cameraman as a Service</p>
-      </div>
 
     </main>
   );

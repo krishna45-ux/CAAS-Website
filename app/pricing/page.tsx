@@ -33,7 +33,7 @@ export default function PricingPage() {
       {/* 1. CONTACT HERO */}
       <section className="contact-hero wrap page-section">
         <div className="contact-hero__inner">
-          <div className="contact-hero__content">
+          <div className="contact-hero__content reveal">
             <div className="contact-btn-wrap">
               <span className="contact-badge">GET IN TOUCH</span>
             </div>
@@ -48,13 +48,13 @@ export default function PricingPage() {
               <Link href="/portfolio" className="btn btn--ghost btn--lg" style={{ borderColor: 'var(--ink)' }}>View Portfolio</Link>
             </div>
           </div>
-          <div className="contact-hero__bg"></div>
+          <div className="contact-hero__bg reveal d1"></div>
         </div>
       </section>
 
       {/* 2. CONTACT CARDS */}
       <section className="contact-cards wrap">
-        <div className="contact-card">
+        <div className="contact-card reveal">
           <div className="contact-card__icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </div>
@@ -66,7 +66,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="contact-card">
+        <div className="contact-card reveal d1">
           <div className="contact-card__icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </div>
@@ -78,7 +78,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="contact-card">
+        <div className="contact-card reveal d2">
           <div className="contact-card__icon">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </div>
@@ -92,20 +92,20 @@ export default function PricingPage() {
       </section>
 
       {/* 3. PRICING TRANSITION */}
-      <section className="pricing-transition wrap page-section">
-        <h2 className="transition-title">Follow Along for <span className="u-cyan">Pricing</span></h2>
-        <div className="transition-path">
-          <svg viewBox="0 0 800 100" fill="none" preserveAspectRatio="none">
-            <path d="M0,20 L400,20 C420,20 420,80 440,80 L790,80" stroke="#b0b5c9" strokeWidth="2" vectorEffect="non-scaling-stroke" />
-            <path d="M785,75 L800,80 L785,85 Z" fill="#b0b5c9" />
+      <section className="pricing-transition wrap reveal" style={{ position: 'relative', zIndex: 5, paddingBottom: 0, marginBottom: '-20px' }}>
+        <h2 className="transition-title" style={{ marginBottom: 0, position: 'relative', zIndex: 2 }}>Follow Along for <span className="u-cyan">Pricing</span></h2>
+        <div className="transition-path" style={{ maxWidth: '900px', height: '150px', margin: '0 auto', marginTop: '-45px', position: 'relative', zIndex: 1 }}>
+          <svg viewBox="0 0 900 150" fill="none" preserveAspectRatio="none" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+            <path d="M 620 30 L 850 30 Q 880 30 880 60 L 880 70 Q 880 100 850 100 L 150 100 Q 120 100 120 130 L 120 145" stroke="#b0b5c9" strokeWidth="4" />
+            <path d="M 105 135 L 120 155 L 135 135 Z" fill="#b0b5c9" />
           </svg>
         </div>
       </section>
 
       {/* 4. PRICING HERO */}
-      <section className="pricing-intro wrap page-section">
+      <section className="pricing-intro wrap" style={{ paddingTop: '20px', paddingBottom: '120px' }}>
         <div className="pricing-intro__inner">
-          <div className="pricing-intro__content">
+          <div className="pricing-intro__content reveal">
             <span className="badge badge--cyan" style={{ border: '1px solid var(--cyan)', color: 'var(--cyan)', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em', display: 'inline-block', marginBottom: '24px' }}>TRANSPARENT BILLING</span>
             <h2 className="h-section" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', lineHeight: 1.1, marginBottom: '24px', letterSpacing: '-0.02em' }}>
               Clear<br/>
@@ -118,7 +118,7 @@ export default function PricingPage() {
               <Link href="#addons" className="btn btn--ghost btn--lg" style={{ borderColor: 'var(--ink)' }}>VIEW ADD-ONS</Link>
             </div>
           </div>
-          <div className="pricing-intro__quote-wrap">
+          <div className="pricing-intro__quote-wrap reveal d1">
              <div className="pricing-intro__bg"></div>
              <div className="quote-box" style={{ background: 'var(--cyan)', color: '#fff', padding: '40px', maxWidth: '300px', position: 'relative', zIndex: 2, transform: 'translateY(100px)' }}>
                 <span className="eyebrow" style={{ color: '#fff', opacity: 0.8, letterSpacing: '0.1em', fontSize: '0.75rem', display: 'block', marginBottom: '16px' }}>TRUSTED BY</span>
@@ -130,13 +130,13 @@ export default function PricingPage() {
 
       {/* 5. BASE PACKAGE */}
       <section className="pricing-base wrap page-section" style={{ paddingTop: '160px' }}>
-        <div className="base-header text-center" style={{ marginBottom: '60px' }}>
+        <div className="base-header text-center reveal" style={{ marginBottom: '60px' }}>
           <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>The Baseline, to <span className="u-cyan" style={{ fontStyle: 'italic' }}>Serve Your Purpose</span></h2>
           <div className="divider divider--cyan" style={{ margin: '24px auto', width: '60px', height: '3px', background: 'var(--cyan)' }}></div>
           <p style={{ color: 'var(--muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>Every production starts here. A comprehensive setup designed to cover 80% of professional content needs.</p>
         </div>
         
-        <div className="base-card" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'grid', gridTemplateColumns: '1fr 1fr', overflow: 'hidden' }}>
+        <div className="base-card reveal" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'grid', gridTemplateColumns: '1fr 1fr', overflow: 'hidden' }}>
           <div className="base-card__left" style={{ padding: '60px', borderRight: '1px solid rgba(0,0,0,0.05)' }}>
             <span className="eyebrow eyebrow--cyan" style={{ color: 'var(--cyan)', fontWeight: 700, letterSpacing: '0.05em', fontSize: '0.85rem' }}>STANDARD SESSION</span>
             <div className="base-price" style={{ margin: '24px 0 8px', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
@@ -175,7 +175,7 @@ export default function PricingPage() {
 
       {/* 6. ADD ONS MENU */}
       <section id="addons" className="pricing-addons wrap page-section">
-        <div className="addons-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+        <div className="addons-header reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
           <div style={{ maxWidth: '600px' }}>
             <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '16px' }}>Menu of Services</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Tailor your session with specific post-production or specialized gear add-ons. Pay only for what your story requires.</p>
@@ -186,7 +186,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="addons-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+        <div className="addons-grid reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
           {[
             { icon: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-2.4 2.4a3 3 0 0 1-4.24-4.24l2.4-2.4a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.4z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'EXPRESS EDITING', price: '₹1,500/HR', desc: 'Quick turnaround video editing. Same-day delivery for short-form content.' },
             { icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'COLOR GRADING', price: '₹2,500/MIN', desc: 'Cinema grade color correction and stylized grading for high-end look.' },
@@ -215,7 +215,7 @@ export default function PricingPage() {
 
       {/* 7. INQUIRY FORM */}
       <section id="inquiry" className="inquiry-section wrap page-section">
-        <div className="inquiry-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '60px' }}>
+        <div className="inquiry-grid reveal" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '60px' }}>
           <div className="inquiry-form-card" style={{ background: '#fff', padding: '60px', borderRadius: '24px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.02)' }}>
             <h2 className="h-section" style={{ fontSize: '2rem', marginBottom: '8px' }}>Inquiry Form</h2>
             <p className="subtitle" style={{ color: 'var(--muted)', marginBottom: '32px' }}>Fill in the details below and we'll connect you with the right specialist.</p>
@@ -295,7 +295,7 @@ export default function PricingPage() {
       </section>
 
       {/* 8. TRUST CTA */}
-      <section className="trust-cta dark" style={{ paddingBlock: '100px', backgroundColor: '#111727', margin: '40px 0', borderRadius: '24px' }}>
+      <section className="trust-cta dark reveal" style={{ paddingBlock: '100px', backgroundColor: '#111727', margin: '40px 0', borderRadius: '24px' }}>
         <div className="wrap trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
           <div className="trust-cta__content">
             <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
@@ -314,12 +314,12 @@ export default function PricingPage() {
 
       {/* 9. FAQ */}
       <section className="pricing-faq wrap page-section" style={{ paddingBlock: '100px' }}>
-        <div className="faq-header text-center" style={{ marginBottom: '60px' }}>
+        <div className="faq-header text-center reveal" style={{ marginBottom: '60px' }}>
           <div className="faq-icon" style={{ display: 'inline-flex', width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(0, 221, 255, 0.1)', color: 'var(--cyan)', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', fontWeight: 700, marginBottom: '16px' }}>?</div>
           <h2 className="h-section" style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Pricing Policy & FAQ</h2>
           <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Everything you need to know about our billing and session management.</p>
         </div>
-        <div className="faq-list" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div className="faq-list reveal d1" style={{ maxWidth: '800px', margin: '0 auto' }}>
           {faqs.map((faq, i) => (
             <div className={`faq-item ${activeFaq === i ? 'active' : ''}`} key={i} style={{ borderBottom: '1px solid rgba(0,0,0,0.1)', padding: '24px 0' }}>
               <button 

@@ -303,7 +303,7 @@ export default function Home() {
                 <h3 className="reveal-text-up d1">Products, Retail &amp; Hospitality</h3>
                 <p className="reveal-text-up d2">Everything a customer should feel about you before they ever visit or buy.</p>
               </div>
-              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/professional_lens.jpg" alt="Close-up product photography with a cinema lens"/></div>
+              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/ind_product.jpg" alt="Close-up product photography with a cinema lens"/></div>
             </article>
             <article className="ind-row">
               <div className="ind-row__txt">
@@ -332,7 +332,7 @@ export default function Home() {
             <p className="lead-txt reveal d1">A living feed of our most recent work — straight off the memory card.</p>
           </div>
           <div className="portfolio__grid">
-            <figure className="pf reveal"><img className="shot" src="/images/professional_lens.jpg" alt="Cinema prime lens detail"/><figcaption className="pf__cap">STILL 01 · f/2.8</figcaption></figure>
+            <figure className="pf reveal"><img className="shot" src="/images/ind_camera_rig.jpg" alt="Cinema prime lens detail"/><figcaption className="pf__cap">STILL 01 · f/2.8</figcaption></figure>
             <figure className="pf reveal d1"><img className="shot" src="/images/blog_lighting.jpg" alt="Golden-hour silhouette shoot"/><figcaption className="pf__cap">STILL 02 · f/1.8</figcaption></figure>
             <figure className="pf reveal d2"><img className="shot" src="/images/storyteller.jpg" alt="Studio storyteller in frame"/><figcaption className="pf__cap">STILL 03 · f/4.0</figcaption></figure>
             <figure className="pf reveal d3"><img className="shot" src="/images/blog_wedding.jpg" alt="Outdoor event coverage"/><figcaption className="pf__cap">STILL 04 · f/2.0</figcaption></figure>
@@ -348,7 +348,7 @@ export default function Home() {
 
         {/* GEAR (dark) */}
         <section className="section dark gear-section">
-          <img className="gear__bg" src="/images/professional_lens.jpg" alt="" aria-hidden="true"/>
+          <img className="gear__bg" src="/images/ind_cinema.jpg" alt="" aria-hidden="true"/>
           <div className="wrap gear__grid">
             <div className="gear__txt">
               <span className="eyebrow">The equipment</span>

@@ -7,7 +7,7 @@ export default function KnowledgeCentrePage() {
       {/* 1. KNOWLEDGE CENTRE HERO */}
       <section className="kc-hero">
         <div className="wrap kc-hero__inner">
-          <div className="kc-hero__content">
+          <div className="kc-hero__content reveal">
             <div className="kc-hero__breadcrumbs">
               Resources &gt; Blogs
             </div>
@@ -17,7 +17,7 @@ export default function KnowledgeCentrePage() {
             <h1 className="kc-hero__title">Resources to Make Your Decision Making Easier</h1>
             <p className="kc-hero__desc">Focused on advising companies on long-term strategy, growth plans, and market positioning.</p>
           </div>
-          <div className="kc-hero__image">
+          <div className="kc-hero__image reveal d1">
             <img src="/images/hero_poster.jpg" alt="Knowledge Centre Team" />
           </div>
         </div>
@@ -26,13 +26,13 @@ export default function KnowledgeCentrePage() {
       {/* 2. EXPERT KNOWLEDGE HUB */}
       <section className="kc-hub">
         <div className="wrap">
-          <div className="kc-hub__header">
+          <div className="kc-hub__header reveal">
             <h2>Expert Knowledge Hub</h2>
             <a href="#" className="kc-hub__browse">BROWSE CATEGORIES</a>
           </div>
           <div className="kc-hub__grid">
             {/* Blogs */}
-            <div className="kc-hub-card">
+            <div className="kc-hub-card reveal">
               <h3 className="kc-hub-card__title" style={{color: '#00d2ff'}}>Blogs</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
@@ -40,7 +40,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             {/* Shoot Guide */}
-            <div className="kc-hub-card kc-hub-card--dark">
+            <div className="kc-hub-card kc-hub-card--dark reveal d1">
               <h3 className="kc-hub-card__title">Shoot Guide</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
@@ -48,7 +48,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             {/* Latest News */}
-            <div className="kc-hub-card">
+            <div className="kc-hub-card reveal d2">
               <h3 className="kc-hub-card__title" style={{color: '#00d2ff'}}>Latest News</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
@@ -62,9 +62,9 @@ export default function KnowledgeCentrePage() {
       {/* 3. DISCOVER BENEFICIAL */}
       <section className="kc-discover">
         <div className="wrap">
-          <h2 className="kc-section-title">Discover something <span className="u-cyan" style={{fontStyle:'italic'}}>beneficial for your next shoot!</span></h2>
+          <h2 className="kc-section-title reveal">Discover something <span className="u-cyan" style={{fontStyle:'italic'}}>beneficial for your next shoot!</span></h2>
           <div className="kc-discover__grid">
-            <div className="kc-discover-main">
+            <div className="kc-discover-main reveal">
               <div className="kc-discover-main__img">
                 <img src="/images/blog_corporate.jpg" alt="New Economic Era" />
               </div>
@@ -77,7 +77,7 @@ export default function KnowledgeCentrePage() {
                 </div>
               </div>
             </div>
-            <div className="kc-discover-side">
+            <div className="kc-discover-side reveal d1">
               <div className="kc-discover-item">
                 <div className="kc-discover-item__img">
                   <img src="/images/blog_corporate.jpg" alt="Managing Workforce" />
@@ -124,7 +124,7 @@ export default function KnowledgeCentrePage() {
 
       {/* 4. DELIVERING RESULTS ACROSS INDUSTRIES */}
       <section className="kc-industries">
-        <div className="wrap kc-industries__inner">
+        <div className="wrap kc-industries__inner reveal">
           <div className="kc-industries__left">
             <span className="kc-badge-small">Proven Success</span>
             <h2>Delivering<br/>Results<br/>Across<br/>Industries</h2>
@@ -171,8 +171,8 @@ export default function KnowledgeCentrePage() {
       {/* 5. SARCAASTIC FEEDBACK */}
       <section className="kc-feedback">
         <div className="wrap">
-          <h2 className="kc-section-title">You should read <strong>sar<span className="u-cyan">CAAS</span>tic</strong> Feedback!!!!</h2>
-          <div className="kc-feedback__card">
+          <h2 className="kc-section-title reveal">You should read <strong>sar<span className="u-cyan">CAAS</span>tic</strong> Feedback!!!!</h2>
+          <div className="kc-feedback__card reveal">
             <div className="kc-feedback__left">
               <span className="kc-feedback__label">CUSTOMER REVIEWS</span>
               <p className="kc-feedback__quote">I had a great experience with the service pet care. They were very professional and attentive to my pet's needs.</p>
@@ -198,9 +198,9 @@ export default function KnowledgeCentrePage() {
       {/* 6. MUST READ FEATURED POSTS */}
       <section className="kc-featured-posts">
         <div className="wrap">
-          <h2 className="kc-section-title">Must Read <span className="u-cyan" style={{fontStyle:'italic'}}>Featured Posts</span></h2>
+          <h2 className="kc-section-title reveal">Must Read <span className="u-cyan" style={{fontStyle:'italic'}}>Featured Posts</span></h2>
           <div className="kc-posts-grid">
-            <div className="kc-post-card">
+            <div className="kc-post-card reveal">
               <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="New Era" /></div>
               <div className="kc-post-card__content">
                 <h3>New Era</h3>
@@ -211,7 +211,7 @@ export default function KnowledgeCentrePage() {
                 </div>
               </div>
             </div>
-            <div className="kc-post-card kc-post-card--dark">
+            <div className="kc-post-card kc-post-card--dark reveal d1">
               <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="Negotiation skill" /></div>
               <div className="kc-post-card__content">
                 <h3>Negotiation skill</h3>
@@ -222,7 +222,7 @@ export default function KnowledgeCentrePage() {
                 </div>
               </div>
             </div>
-            <div className="kc-post-card">
+            <div className="kc-post-card reveal d2">
               <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="Money" /></div>
               <div className="kc-post-card__content">
                 <h3>Money</h3>
@@ -239,7 +239,7 @@ export default function KnowledgeCentrePage() {
 
       {/* 7. CTA BLOCK */}
       <section className="kc-cta">
-        <div className="wrap kc-cta__inner">
+        <div className="wrap kc-cta__inner reveal">
           <h2>Can't find what you're<br/>looking for?</h2>
           <p>Our specialists are available for technical consultations regarding specific equipment needs or unique production environments.</p>
           <div className="kc-cta__buttons">
@@ -252,7 +252,7 @@ export default function KnowledgeCentrePage() {
       {/* 8. NEWSLETTER */}
       <section className="kc-newsletter">
         <div className="wrap">
-          <div className="kc-newsletter__inner">
+          <div className="kc-newsletter__inner reveal">
             <div className="kc-newsletter__text">
               <h3>The Monthly Viewfinder.</h3>
               <p>A curated monthly digest of cinematography techniques, platform updates, and industry insights.</p>
