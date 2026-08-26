@@ -236,24 +236,28 @@ export default function PortfolioPage() {
         {/* Curved area inside dark section */}
         <div className="pf-curve">
            <div className="pf-avatars">
-              {/* Premium overlapping avatars */}
-              <div className="pf-avatar-card">
-                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+              <div className="pf-avatar-card sm">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
               </div>
-              <div className="pf-avatar-card">
-                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+              <div className="pf-avatar-card md">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
               </div>
               <div className="pf-avatar-card lg">
-                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
               </div>
-              <div className="pf-avatar-card">
-                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+              <div className="pf-avatar-card md">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
               </div>
-              <div className="pf-avatar-card">
-                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+              <div className="pf-avatar-card sm">
+                 <div className="name">Full name</div>
+                 <img src="/images/storyteller.jpg" alt="" />
               </div>
            </div>
-           <h2 className="pf-curve__title text-center">Backed by <span className="u-cyan u-italic">Our Masters</span></h2>
+           <h2 className="pf-curve__title text-center" style={{ marginTop: '40px' }}>Latest Client Feedback for<br/><span className="u-cyan u-italic">Our Masters</span></h2>
         </div>
       </section>
 
@@ -294,33 +298,26 @@ export default function PortfolioPage() {
               <p>From content that connects to events that matter, we've got your shoot covered.</p>
               
               <div className="pf-features-grid">
-                <div className="f-box glass">
+                <div className="f-box">
                   <div className="f-icon">📱</div>
-                  <div className="f-content">
-                    <strong>Social Media</strong>
-                    <span>Reels, Shorts, Posts</span>
-                  </div>
+                  <strong>Social Media Content</strong>
+                  <span>Reels, Shorts, Posts & more</span>
                 </div>
-                <div className="f-box glass">
+                <div className="f-box">
                   <div className="f-icon">📅</div>
-                  <div className="f-content">
-                    <strong>Event Coverage</strong>
-                    <span>Birthdays, Corporate</span>
-                  </div>
+                  <strong>Event Coverage</strong>
+                  <span>Birthdays, Functions, Corporate & more</span>
+                  <span className="sub">*Photo & video pricing differs</span>
                 </div>
-                <div className="f-box glass">
+                <div className="f-box">
                   <div className="f-icon">👤</div>
-                  <div className="f-content">
-                    <strong>Influencer</strong>
-                    <span>Lifestyle, Fashion</span>
-                  </div>
+                  <strong>Influencer Shoots</strong>
+                  <span>Lifestyle, Fashion, Collabs & more</span>
                 </div>
-                <div className="f-box glass">
+                <div className="f-box">
                   <div className="f-icon">💼</div>
-                  <div className="f-content">
-                    <strong>Business</strong>
-                    <span>Products, Brands</span>
-                  </div>
+                  <strong>Business Shoots</strong>
+                  <span>Offices, Products, Brand Stories & more</span>
                 </div>
               </div>
 
@@ -380,9 +377,15 @@ export default function PortfolioPage() {
           <img src="/images/professional_lens.jpg" alt="Camera Rig" />
         </div>
         <div className="pf-bts__content wrap">
-          <span className="pf-bts__eyebrow">— BEHIND THE SCENES</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+            <div style={{ width: '40px', height: '2px', background: 'var(--cyan-bright)' }}></div>
+            <span className="pf-bts__eyebrow" style={{ margin: 0 }}>BEHIND THE SCENES</span>
+          </div>
           <h2>Crafting premium<br/>narratives<br/>through cinema-<br/>grade lenses.</h2>
-          <button className="btn btn--cyan">▷ WATCH REEL 2024</button>
+          <button className="btn btn--cyan" style={{ borderRadius: '0', padding: '16px 32px', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3L19 12L5 21V3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            WATCH REEL 2024
+          </button>
         </div>
       </section>
 

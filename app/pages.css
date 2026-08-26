@@ -1450,7 +1450,7 @@
 .contact-hero { padding-top: clamp(140px, 18vh, 180px); padding-bottom: 60px; position: relative; }
 .contact-hero__inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
 .contact-hero__content { position: relative; z-index: 2; padding: 40px 0; }
-.contact-hero__bg { position: absolute; right: -5vw; top: 0; bottom: 0; width: 60%; background: #f1f3f5; border-radius: 24px; z-index: 1; }
+.contact-hero__bg { position: absolute; right: -5vw; top: 0; bottom: 0; width: 60%; background: #f1f3f5 url('/images/professional_lens.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
 .contact-badge { border: 1px solid var(--ink); padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; border-radius: 4px; display: inline-block; margin-bottom: 24px; }
 
 .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: -40px; position: relative; z-index: 10; margin-bottom: 80px; }
@@ -1466,7 +1466,7 @@
 
 .pricing-intro__inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
 .pricing-intro__quote-wrap { position: relative; display: flex; justify-content: center; padding: 40px; }
-.pricing-intro__bg { position: absolute; inset: 0; background: #f1f3f5; border-radius: 24px; z-index: 1; }
+.pricing-intro__bg { position: absolute; inset: 0; background: #f1f3f5 url('/images/hero_cinematic.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
 
 @media (max-width: 992px) {
   .contact-hero__inner { grid-template-columns: 1fr; }
