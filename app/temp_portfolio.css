@@ -69,13 +69,14 @@
 .pf-expertise__text { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: 24px; }
 
 /* CURVE AND AVATARS */
-.pf-curve { position: relative; z-index: 2; margin-top: -40px; }
-.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
-.pf-avatar-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.pf-avatar-card .name { background: #fff; color: var(--ink); font-size: 0.7rem; font-weight: 700; padding: 8px 12px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.pf-avatar-card img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid var(--ink); }
-.pf-avatar-card img.lg { width: 96px; height: 96px; }
-.pf-curve__title { font-size: clamp(2rem, 4vw, 3rem); color: #fff; }
+.pf-curve { position: relative; z-index: 2; margin-top: -20px; }
+.pf-avatars { display: flex; justify-content: center; align-items: center; margin-bottom: 40px; padding-left: 20px; }
+.pf-avatar-card { display: flex; flex-direction: column; align-items: center; transition: 0.3s; margin-left: -20px; position: relative; }
+.pf-avatar-card img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 4px solid var(--ink); box-shadow: 0 10px 20px rgba(0,0,0,0.5); transition: 0.3s; background: var(--ink); }
+.pf-avatar-card.lg img { width: 110px; height: 110px; border: 6px solid var(--ink); z-index: 2; position: relative; }
+.pf-avatar-card:hover { transform: translateY(-10px); z-index: 10; }
+.pf-avatar-card:hover img { border-color: var(--cyan-bright); }
+.pf-curve__title { font-size: clamp(2rem, 4vw, 3rem); color: #fff; padding-bottom: 80px; }
 
 /* 4. THE 3500 CONCEPT */
 .pf-concept { background: var(--cyan-bright); padding: 160px 0 100px; margin-top: -100px; z-index: 1; position: relative; color: var(--ink); }
@@ -95,9 +96,25 @@
 .pf-price-card .addon .small { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
 .pf-price-card .note { display: flex; gap: 8px; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 8px; font-size: 0.85rem; align-items: center; }
 
-.pf-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 48px 0; }
-.pf-features-grid .f-box { display: flex; flex-direction: column; gap: 4px; }
-.pf-features-grid .f-icon { font-size: 2rem; margin-bottom: 12px; background: rgba(255,255,255,0.2); width: 64px; height: 64px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.pf-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
+.pf-features-grid .f-box.glass { 
+  display: flex; flex-direction: row; gap: 16px; align-items: center; 
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(10px); 
+  padding: 20px; 
+  border-radius: 16px; 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+.pf-features-grid .f-box.glass:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+.pf-features-grid .f-icon { font-size: 1.8rem; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.pf-features-grid .f-content { display: flex; flex-direction: column; }
+.pf-features-grid .f-content strong { font-size: 1.05rem; margin-bottom: 2px; }
+.pf-features-grid .f-content span { font-size: 0.85rem; opacity: 0.8; }
 .pf-concept__ctas { display: flex; gap: 16px; margin-bottom: 24px; }
 .btn--white { background: #fff; color: var(--ink); border: 1.5px solid #fff; }
 .btn--ghost-white { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }

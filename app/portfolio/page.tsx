@@ -236,33 +236,24 @@ export default function PortfolioPage() {
         {/* Curved area inside dark section */}
         <div className="pf-curve">
            <div className="pf-avatars">
-              {/* Fake avatars for the demo */}
+              {/* Premium overlapping avatars */}
               <div className="pf-avatar-card">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
               </div>
               <div className="pf-avatar-card">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
+              </div>
+              <div className="pf-avatar-card lg">
+                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
               </div>
               <div className="pf-avatar-card">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
-              </div>
-              <div className="pf-avatar-card" style={{ marginTop: '-40px' }}>
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" className="lg" />
+                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
               </div>
               <div className="pf-avatar-card">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
-              </div>
-              <div className="pf-avatar-card">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <img src="/images/storyteller.jpg" alt="Master Cameraman" />
               </div>
            </div>
-           <h2 className="pf-curve__title text-center">Latest Client Feedback for<br/><span className="u-cyan u-italic">Our Masters</span></h2>
+           <h2 className="pf-curve__title text-center">Backed by <span className="u-cyan u-italic">Our Masters</span></h2>
         </div>
       </section>
 
@@ -303,26 +294,33 @@ export default function PortfolioPage() {
               <p>From content that connects to events that matter, we've got your shoot covered.</p>
               
               <div className="pf-features-grid">
-                <div className="f-box">
+                <div className="f-box glass">
                   <div className="f-icon">📱</div>
-                  <strong>Social Media Content</strong>
-                  <span>Reels, Shorts, Posts & more</span>
+                  <div className="f-content">
+                    <strong>Social Media</strong>
+                    <span>Reels, Shorts, Posts</span>
+                  </div>
                 </div>
-                <div className="f-box">
+                <div className="f-box glass">
                   <div className="f-icon">📅</div>
-                  <strong>Event Coverage</strong>
-                  <span>Birthdays, Functions, Corporate & more</span>
-                  <span className="sub">*Photo & video pricing differs</span>
+                  <div className="f-content">
+                    <strong>Event Coverage</strong>
+                    <span>Birthdays, Corporate</span>
+                  </div>
                 </div>
-                <div className="f-box">
+                <div className="f-box glass">
                   <div className="f-icon">👤</div>
-                  <strong>Influencer Shoots</strong>
-                  <span>Lifestyle, Fashion, Collabs & more</span>
+                  <div className="f-content">
+                    <strong>Influencer</strong>
+                    <span>Lifestyle, Fashion</span>
+                  </div>
                 </div>
-                <div className="f-box">
+                <div className="f-box glass">
                   <div className="f-icon">💼</div>
-                  <strong>Business Shoots</strong>
-                  <span>Offices, Products, Brand Stories & more</span>
+                  <div className="f-content">
+                    <strong>Business</strong>
+                    <span>Products, Brands</span>
+                  </div>
                 </div>
               </div>
 
