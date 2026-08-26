@@ -3,6 +3,7 @@
    Refined, animated landing page
    Concept: the whole page is a cinema viewfinder.
    ============================================================ */
+@import url('./pages.css');
 
 /* ---------- Design tokens ---------- */
 :root{

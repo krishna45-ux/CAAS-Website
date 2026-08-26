@@ -3,11 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const [isNavStuck, setIsNavStuck] = useState(false);
-  const [navTc, setNavTc] = useState('00:00:00:00');
   const [heroTc, setHeroTc] = useState('00:00:00:00');
-  const [scrubberWidth, setScrubberWidth] = useState('0%');
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const [activeDay, setActiveDay] = useState('tue');
   const [isPreload, setIsPreload] = useState(true);
   const [parallaxY, setParallaxY] = useState(0);
@@ -42,12 +38,8 @@ export default function Home() {
       // Parallax for hero grid
       setParallaxY(y * 0.35);
 
-      // Nav stuck state
-      setIsNavStuck(y > 24);
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      const p = docH > 0 ? y / docH : 0;
-      setScrubberWidth((p * 100).toFixed(2) + '%');
-      setNavTc(tc(Math.floor(p * REEL)));
+      // Parallax for hero grid
+      setParallaxY(y * 0.35);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -75,55 +67,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Global ScrollObserver handles .reveal animations and [data-count]
     
-    // Intersection Observers for reveals and counters
-    if ('IntersectionObserver' in window && !reduceMotion) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-in');
-          }
-        });
-      }, { threshold: 0.3 });
-      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-text-down, .reveal-text-up, .reveal-shutter, .reveal-deal, .reveal-lens, .reveal-scan').forEach(el => observer.observe(el));
-    } else {
-      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-text-down, .reveal-text-up, .reveal-shutter, .reveal-deal, .reveal-lens, .reveal-scan').forEach(el => el.classList.add('is-in'));
-    }
-
-    const animateCount = (el: Element) => {
-      const target = parseFloat(el.getAttribute('data-count') || '0');
-      const suffix = el.getAttribute('data-suffix') || '';
-      if (reduceMotion) {
-        el.textContent = target.toLocaleString('en-IN') + suffix;
-        return;
-      }
-      const dur = 1400;
-      let t0: number | null = null;
-      const step = (t: number) => {
-        if (t0 === null) t0 = t;
-        const p = Math.min((t - t0) / dur, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * eased).toLocaleString('en-IN') + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
-
-    const counters = document.querySelectorAll('[data-count]');
-    if ('IntersectionObserver' in window) {
-      const cio = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            animateCount(e.target);
-            cio.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.6 });
-      counters.forEach(el => cio.observe(el));
-    } else {
-      counters.forEach(animateCount);
-    }
+    // Smooth scrolling
+    const links = document.querySelectorAll('a[href^="#"]');
   }, [isPreload]); // run after preload removes
 
   const handleDayClick = (day: string) => {
@@ -140,41 +87,6 @@ export default function Home() {
 
   return (
     <div className={isPreload ? "preload" : ""}>
-
-      {/* scrubber */}
-      <div className="scrubber" id="scrubber" style={{ width: scrubberWidth }}></div>
-
-      {/* NAV */}
-      <header className={`nav ${isNavStuck ? 'is-stuck' : ''} ${isNavOpen ? 'is-open' : ''}`} id="nav">
-        <div className="nav__pill">
-          <a href="#top" className="brand" aria-label="CAAS — home">
-            <img src="/images/nav_logo.png" className="brand__logo" alt="" width="776" height="236" />
-          </a>
-          <nav className="nav__links" aria-label="Primary">
-            <a href="#find" onClick={() => setIsNavOpen(false)}>Find a Cameraman</a>
-            <a href="#shoot" onClick={() => setIsNavOpen(false)}>Services</a>
-            <a href="#how" onClick={() => setIsNavOpen(false)}>How It Works</a>
-            <a href="#portfolio" onClick={() => setIsNavOpen(false)}>Portfolio</a>
-            <a href="#blog" onClick={() => setIsNavOpen(false)}>Blog</a>
-            <a href="#login" className="mobile-only" onClick={() => setIsNavOpen(false)}>Log in</a>
-            <a href="#join" className="btn nav__cta mobile-only" onClick={() => setIsNavOpen(false)}>Join as Cameraman</a>
-          </nav>
-          <div className="nav__right">
-            <a href="#login" className="nav__login">Log in</a>
-            <a href="#join" className="btn nav__cta">Join as Cameraman</a>
-          </div>
-          <button 
-            className="nav__burger" 
-            id="burger" 
-            aria-label="Menu" 
-            aria-expanded={isNavOpen}
-            onClick={() => setIsNavOpen(!isNavOpen)}
-          >
-            <span></span>
-          </button>
-        </div>
-      </header>
-
       <main id="top">
         {/* HERO */}
         <section className="hero">
@@ -509,37 +421,6 @@ export default function Home() {
           <p className="final__small reveal d3">Available across 12 cities · Book in under 60 seconds</p>
         </section>
       </main>
-
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="wrap">
-          <div className="footer__top">
-            <a href="#top" className="brand" aria-label="CAAS home">
-              <img src="/images/logo_ondark.png" alt="CAAS logo" className="footer__logo"/>
-            </a>
-            <nav className="footer__links" aria-label="Footer">
-              <a href="#top">About Us</a><a href="#shoot">Services</a><a href="#portfolio">Portfolio</a>
-              <a href="#pricing">Pricing</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact</a>
-            </nav>
-            <div className="footer__social">
-              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
-              <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.5 21h-5.9l-4.1-5.4L6.6 21H3.5l7-8L2.9 3h6l3.7 4.9zm-1 16h1.6L8.1 4.6H6.4z"/></svg></a>
-              <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 9v10H3V9zm-1.5-5a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM9 9h3v1.5c.5-.9 1.7-1.8 3.4-1.8 3 0 3.6 2 3.6 4.5V19h-3v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19H9z"/></svg></a>
-              <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" strokeWidth="1.6"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></svg></a>
-            </div>
-          </div>
-        </div>
-        <div className="wordmark">
-          <b>CAAS</b>
-          <small>Cameraman as a Service</small>
-        </div>
-        <div className="wrap">
-          <div className="footer__copy">
-            <span>© 2026 CAAS — Cameraman as a Service. All rights reserved.</span>
-            <span>Made with 🔥 by <a href="https://labs.theangaarbatch.in/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#fff' }}>The Angaar Labs</a></span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
