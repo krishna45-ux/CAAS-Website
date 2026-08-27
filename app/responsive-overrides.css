@@ -7,7 +7,7 @@
   .wrap {
     padding-inline: 16px !important;
   }
-  .section {
+  .page-main .section {
     padding-block: 48px !important;
   }
 
@@ -153,6 +153,11 @@
     margin-bottom: 16px !important;
   }
 
+  /* Pricing page contact hero fix */
+  .contact-hero__bg {
+    display: none !important;
+  }
+
   /* Force bento cards and standard cards to stretch full width */
   .bento-card, .pf-price-card, .pf-guide-card, .pf-niche-card, .stat-card,
   .base-card, .addon-card, .inquiry-form-card, .contact-card {
@@ -200,10 +205,40 @@
 
   /* Social proof stat overrides */
   .social-proof-block {
-    padding-block: 32px !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
   }
   .stat-num {
-    font-size: 3rem !important;
+    font-size: 1.5rem !important;
+  }
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+  .social-proof__stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .social-proof__testimonials .testimonial-card {
+    padding: 24px !important;
+  }
+  .testimonial-stars {
+    margin-bottom: 12px !important;
+    font-size: 1.2rem !important;
+  }
+  .social-proof__testimonials p {
+    font-size: 0.95rem !important;
+    margin-bottom: 16px !important;
+  }
+  .social-proof__ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+  .social-proof__ctas .btn {
+    width: 100% !important;
+    text-align: center;
+    padding: 12px !important;
   }
 
   /* Services social proof heading */
@@ -242,7 +277,7 @@
   .h-section {
     font-size: 1.6rem !important;
   }
-  .section {
+  .page-main .section {
     padding-block: 40px !important;
   }
   .pf-big-footer h1 {
