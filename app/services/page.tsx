@@ -6,19 +6,25 @@ export default function ServicesPage() {
     <main id="top" className="page-main services-page">
       
       {/* 1. HERO SECTION */}
-      <section className="services-cta page-section">
-        <div className="wrap services-cta__inner">
-          <div className="services-cta__content reveal-left">
+      <section className="services-cta page-section dark" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 16, 30, 0.75), rgba(10, 16, 30, 0.75)), url(/images/hero_cinematic.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative'
+      }}>
+        <div className="wrap">
+          <div className="services-cta__content reveal-left" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <span className="eyebrow eyebrow--cyan">Let's Talk</span>
             <h1 className="h-section" style={{ marginTop: 0 }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h1>
             <p>Whether it's a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
             
-            <div className="services-cta__buttons">
-              <Link href="/contact" className="btn btn--blue btn--lg">Request a Custom Quote</Link>
-              <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
+            <div className="services-cta__buttons" style={{ justifyContent: 'center', marginTop: '32px' }}>
+              <Link href="/contact" className="btn btn--cyan btn--lg">Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--outline btn--lg">Schedule Consultation</Link>
             </div>
 
-            <div className="services-cta__stats">
+            <div className="services-cta__stats" style={{ justifyContent: 'center', marginTop: '48px' }}>
               <div>
                 <strong>1500+</strong>
                 <span>PROJECTS COMPLETED</span>
@@ -32,10 +38,6 @@ export default function ServicesPage() {
                 <span>DELIVERY PROMISE</span>
               </div>
             </div>
-          </div>
-          
-          <div className="services-cta__image reveal-right">
-             <Image src="/images/hero_cinematic.jpg" alt="Cameraman" fill priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
