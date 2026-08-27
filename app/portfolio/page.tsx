@@ -45,6 +45,21 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* 1b. VIDEO REEL SECTION */}
+      <section className="pf-reel page-section wrap">
+        <div className="pf-reel__inner reveal">
+          <div className="pf-reel__bg">
+            <img src="/images/ind_cinema.jpg" alt="Behind the lens" />
+            <div className="pf-reel__overlay"></div>
+          </div>
+          <button className="pf-reel__play" aria-label="Watch our showreel">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
       {/* 2. NICHE / INSPIRATION TOGGLE */}
       <section className="pf-niche wrap page-section">
         <div className="pf-niche__head text-center reveal">
@@ -173,7 +188,7 @@ export default function PortfolioPage() {
         </div>
 
         <div className="text-center" style={{ marginTop: '48px' }}>
-          <button className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '12px 32px' }}>See What Lens Delivers</button>
+          <Link href="/services" className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '12px 32px' }}>See What Lens Delivers</Link>
         </div>
       </section>
 
@@ -231,24 +246,24 @@ export default function PortfolioPage() {
         <div className="pf-curve">
            <div className="pf-avatars">
               <div className="pf-avatar-card sm">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <div className="name">Ravi M.</div>
+                 <img src="/images/storyteller.jpg" alt="Ravi M." />
               </div>
               <div className="pf-avatar-card md">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <div className="name">Priya S.</div>
+                 <img src="/images/sarcastic_crew_2.png" alt="Priya S." />
               </div>
               <div className="pf-avatar-card lg">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <div className="name">Arjun K.</div>
+                 <img src="/images/storyteller.jpg" alt="Arjun K." />
               </div>
               <div className="pf-avatar-card md">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <div className="name">Meera D.</div>
+                 <img src="/images/sarcastic_crew_2.png" alt="Meera D." />
               </div>
               <div className="pf-avatar-card sm">
-                 <div className="name">Full name</div>
-                 <img src="/images/storyteller.jpg" alt="" />
+                 <div className="name">Sanya T.</div>
+                 <img src="/images/storyteller.jpg" alt="Sanya T." />
               </div>
            </div>
            <h2 className="pf-curve__title text-center" style={{ marginTop: '40px' }}>Latest Client Feedback for<br/><span className="u-cyan u-italic">Our Masters</span></h2>
@@ -316,8 +331,8 @@ export default function PortfolioPage() {
               </div>
 
               <div className="pf-concept__ctas">
-                <button className="btn btn--white"><span className="icon">📅</span> Book a Shoot</button>
-                <button className="btn btn--ghost-white"><span className="icon">🎧</span> Contact Us Now!</button>
+                <Link href="/book" className="btn btn--white"><span className="icon">📅</span> Book a Shoot</Link>
+                <Link href="/contact" className="btn btn--ghost-white"><span className="icon">🎧</span> Contact Us Now!</Link>
               </div>
               <p className="pf-trusted">
                 <span className="icon">🛡️</span> Trusted professionals. On-time delivery. Hassle-free experience.
@@ -336,19 +351,19 @@ export default function PortfolioPage() {
 
         <div className="pf-guide-cards">
           <div className="pf-guide-card reveal">
-            <h3>Implementation</h3>
-            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
-            <img src="/images/blog_corporate.jpg" alt="" />
+            <h3>Plan Your Shoot</h3>
+            <p>"Think through your content goals before the day. The best shoots start with a clear brief — saves time, money and retakes."</p>
+            <img src="/images/blog_lighting.jpg" alt="Planning" />
           </div>
           <div className="pf-guide-card dark">
-            <h3>Implementation</h3>
-            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
-            <img src="/images/blog_corporate.jpg" alt="" />
+            <h3>Choose the Right Crew</h3>
+            <p>"Not every shoot needs a 10-person team. Match your crew size to the scope — a tight brief, a focused crew, a sharper result."</p>
+            <img src="/images/sarcastic_crew_2.png" alt="Crew" />
           </div>
           <div className="pf-guide-card reveal">
-            <h3>Implementation</h3>
-            <p>"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
-            <img src="/images/blog_corporate.jpg" alt="" />
+            <h3>Review Before Delivery</h3>
+            <p>"Always do a quick review pass before sending files. A well-checked delivery sets the tone for a long-term client relationship."</p>
+            <img src="/images/home_corporate.jpg" alt="Delivery" />
           </div>
         </div>
 
@@ -358,9 +373,9 @@ export default function PortfolioPage() {
             <p className="u-italic" style={{ color: 'var(--ink)', fontWeight: 600 }}>showing up with intent is only thing<br/>that matters</p>
           </div>
           <div className="pf-glance__circles">
-            <div className="circle"><span className="icon">🖼️</span></div>
-            <div className="circle"><span className="icon">🖼️</span></div>
-            <div className="circle"><span className="icon">🖼️</span></div>
+            <div className="circle"><img src="/images/home_studio.jpg" alt="Studio shoot" /></div>
+            <div className="circle"><img src="/images/home_event.jpg" alt="Event shoot" /></div>
+            <div className="circle"><img src="/images/home_creator.jpg" alt="Creator shoot" /></div>
           </div>
         </div>
       </section>
@@ -392,8 +407,8 @@ export default function PortfolioPage() {
           </h2>
           <p>Join 200+ brands using CAAS to produce high-end content at scale.<br/>Book your first 6-hour session today.</p>
           <div className="pf-surf__ctas">
-            <button className="btn btn--white">BOOK A SHOOT NOW</button>
-            <button className="btn btn--ghost-dark">VIEW PRICING</button>
+            <Link href="/book" className="btn btn--white">BOOK A SHOOT NOW</Link>
+            <Link href="/pricing" className="btn btn--ghost-dark">VIEW PRICING</Link>
           </div>
         </div>
       </section>

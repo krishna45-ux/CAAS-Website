@@ -173,7 +173,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="expertise-bento__center-btn reveal d3">
-            <button className="btn btn--cyan">View More Industries</button>
+            <a href="#niche-section" className="btn btn--cyan">View More Services</a>
           </div>
 
           {/* Middle Row: 3 small cards */}
@@ -255,7 +255,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 5. NICHE DIAGRAM */}
-      <section className="services-niche page-section wrap">
+      <section id="niche-section" className="services-niche page-section wrap">
         <div className="head head--center">
           <h2 className="h-section reveal">Specialized <span className="u-red">Expertise</span> for<br/>Every Niche.</h2>
         </div>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
             </div>
             <div className="niche-item niche-item--left" style={{ top: '77%' }}>
               <Link href="/contact" className="niche-item__box niche-item__box--cyan">
-                Dont Look Confused,<br/><strong>Reach Out to us Directly</strong>
+                Don't Look Confused,<br/><strong>Reach Out to us Directly</strong>
               </Link>
               <div className="niche-item__arrow"></div>
             </div>
@@ -474,6 +474,37 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* 7b. SAME PRODUCTION STANDARD */}
+      <section className="services-standard page-section wrap">
+        <div className="head head--center">
+          <span className="eyebrow eyebrow--center">THE CAAS DIFFERENCE</span>
+          <h2 className="h-section reveal">Different Shoots.<br/><span className="u-cyan">Same Production Standard.</span></h2>
+          <p className="head__sub reveal d1">Whether it's a product shoot in a studio or a 4-camera setup at a corporate summit — the crew, process and quality bar never changes.</p>
+        </div>
+        <div className="standard-grid reveal d2">
+          <div className="standard-card">
+            <div className="standard-card__num">01</div>
+            <h4>Same Crew Quality</h4>
+            <p>Every cameraman on our roster is vetted, trained and briefed before they set foot on your shoot.</p>
+          </div>
+          <div className="standard-card">
+            <div className="standard-card__num">02</div>
+            <h4>Same Communication Flow</h4>
+            <p>One point of contact. One pre-shoot brief. No information gets lost between you and the crew on the ground.</p>
+          </div>
+          <div className="standard-card">
+            <div className="standard-card__num">03</div>
+            <h4>Same Delivery Process</h4>
+            <p>Files organised, labelled and handed off on time — every single time. No follow-ups required from your end.</p>
+          </div>
+          <div className="standard-card">
+            <div className="standard-card__num">04</div>
+            <h4>Same Equipment Grade</h4>
+            <p>Cinema-grade cameras, lenses and lighting — regardless of the shoot size or budget tier you've chosen.</p>
+          </div>
+        </div>
+      </section>
+
       {/* 8. WHAT WE DON'T SHOOT */}
       <section className="services-exclusion page-section wrap">
         <div className="exclusion-card reveal">
@@ -552,8 +583,23 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-
+      {/* 10. FINAL CTA */}
+      <section className="services-final-cta page-section">
+        <div className="wrap services-final-cta__inner">
+          <div className="services-final-cta__content reveal">
+            <span className="eyebrow eyebrow--cyan">LET'S TALK</span>
+            <h2 className="h-section" style={{ marginTop: '12px' }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h2>
+            <p>Whether it's a single product shoot or a multi-day campaign, our project managers are ready to build your custom production package.</p>
+            <div className="services-final-cta__btns">
+              <Link href="/contact" className="btn btn--cyan btn--lg">Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>Schedule Consultation</Link>
+            </div>
+          </div>
+          <div className="services-final-cta__img reveal d1">
+            <img src="/images/hero_cinematic.jpg" alt="Cameraman on set" />
+          </div>
+        </div>
+      </section>
 
     </main>
   );

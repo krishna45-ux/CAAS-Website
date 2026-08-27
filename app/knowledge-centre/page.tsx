@@ -12,13 +12,16 @@ export default function KnowledgeCentrePage() {
               Resources &gt; Blogs
             </div>
             <div className="kc-hero__badge">
-              <span className="kc-hero__badge-icon">🎯</span> Curiosity has its Answer here
+              <span className="kc-hero__badge-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              Curiosity has its Answer here
             </div>
             <h1 className="kc-hero__title">Resources to Make Your Decision Making Easier</h1>
             <p className="kc-hero__desc">Focused on advising companies on long-term strategy, growth plans, and market positioning.</p>
           </div>
           <div className="kc-hero__image reveal d1">
-            <img src="/images/hero_poster.jpg" alt="Knowledge Centre Team" />
+            <img src="/images/workforce.jpg" alt="Knowledge Centre Team" />
           </div>
         </div>
       </section>

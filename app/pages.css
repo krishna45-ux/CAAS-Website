@@ -1638,15 +1638,16 @@
 }
 
 /* KNOWLEDGE CENTRE STYLES */
-.kc-page { background: #fff; padding-bottom: 0; }
-.kc-hero { padding-top: 80px; padding-bottom: 60px; position: relative; background: #fafafa; }
-.kc-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-.kc-hero__breadcrumbs { font-size: 0.85rem; font-weight: 500; margin-bottom: 24px; color: var(--ink); }
-.kc-hero__badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: #00d2ff; background: rgba(0,210,255,0.1); padding: 6px 12px; border-radius: 20px; margin-bottom: 16px; }
-.kc-hero__title { font-size: 3rem; font-family: var(--display); line-height: 1.1; margin-bottom: 24px; }
-.kc-hero__desc { font-size: 1.1rem; color: var(--muted); line-height: 1.6; max-width: 400px; }
-.kc-hero__image { border-radius: 24px; overflow: hidden; height: 100%; min-height: 400px; }
-.kc-hero__image img { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; }
+.kc-hero { padding-block: clamp(120px, 15vh, 160px) clamp(60px, 10vh, 80px); position: relative; background: #fafafa; display: flex; align-items: center; min-height: 85vh; }
+.kc-hero__inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center; width: 100%; }
+.kc-hero__breadcrumbs { font-size: 0.85rem; font-weight: 500; margin-bottom: 40px; color: var(--ink); }
+.kc-hero__badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: #00d2ff; background: rgba(0, 210, 255, 0.1); padding: 8px 16px; border-radius: 999px; margin-bottom: 24px; }
+.kc-hero__badge-icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #00d2ff; color: #fff; border-radius: 50%; }
+.kc-hero__badge-icon svg { width: 14px; height: 14px; }
+.kc-hero__title { font-size: clamp(3rem, 5vw, 4rem); font-family: var(--display); line-height: 1.1; margin-bottom: 24px; color: var(--ink); letter-spacing: -0.02em; }
+.kc-hero__desc { font-size: 1.1rem; color: var(--muted); line-height: 1.6; max-width: 460px; }
+.kc-hero__image { border-radius: 32px; overflow: hidden; height: clamp(400px, 60vh, 600px); width: 100%; position: relative; box-shadow: 0 24px 48px rgba(0,0,0,0.06); }
+.kc-hero__image img { width: 100%; height: 100%; object-fit: cover; }
 
 .kc-hub { padding: 80px 0; background: #fff; text-align: center; }
 .kc-hub__header { margin-bottom: 40px; }
@@ -1758,8 +1759,9 @@
 .kc-newsletter__input { flex-grow: 1; padding: 12px 20px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); outline: none; }
 
 @media (max-width: 992px) {
-  .kc-hero__inner { grid-template-columns: 1fr; }
+  .kc-hero__inner { grid-template-columns: 1fr; gap: 40px; }
   .kc-hero__title { font-size: 2.2rem; }
+  .kc-hero__image { height: 350px; }
   .kc-hub__grid { grid-template-columns: 1fr; }
   .kc-discover__grid { grid-template-columns: 1fr; }
   .kc-industries__inner { grid-template-columns: 1fr; gap: 40px; }
@@ -1987,6 +1989,254 @@
   .addons-grid { grid-template-columns: 1fr !important; }
   .inquiry-grid { grid-template-columns: 1fr !important; }
   .trust-cta__inner { grid-template-columns: 1fr !important; text-align: center; }
+  .trust-cta__right { border-radius: 0 !important; padding: 40px 24px !important; }
   .trust-cta__buttons { justify-content: center !important; }
 }
+
+/* ============================================================
+   INDUSTRIES — SAME PRODUCTION STANDARD SECTION
+   ============================================================ */
+.standard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.standard-card {
+  background: var(--bg);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 36px 28px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.standard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+}
+
+.standard-card__num {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: var(--display);
+  color: var(--cyan);
+  opacity: 0.15;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.standard-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+  font-family: var(--display);
+}
+
+.standard-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .standard-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .standard-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   INDUSTRIES — FINAL CTA SECTION
+   ============================================================ */
+.services-final-cta {
+  background: var(--slate);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-final-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding-block: clamp(80px, 12vh, 120px);
+}
+
+.services-final-cta__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.services-final-cta__content .h-section {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.services-final-cta__content p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+.services-final-cta__btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.services-final-cta__img {
+  position: relative;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.services-final-cta__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .services-final-cta__inner { grid-template-columns: 1fr; gap: 40px; }
+  .services-final-cta__img { height: 260px; }
+}
+
+/* ============================================================
+   PORTFOLIO — VIDEO REEL SECTION
+   ============================================================ */
+.pf-reel {
+  padding-block: 0;
+  padding-bottom: clamp(60px, 8vh, 100px);
+}
+
+.pf-reel__inner {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: clamp(320px, 45vw, 560px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pf-reel__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.pf-reel__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.pf-reel__inner:hover .pf-reel__bg img {
+  transform: scale(1.03);
+}
+
+.pf-reel__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,25,0.55);
+}
+
+.pf-reel__play {
+  position: relative;
+  z-index: 2;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.pf-reel__play:hover {
+  transform: scale(1.12);
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.pf-reel__play svg {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px; /* optical center for play icon */
+}
+
+/* ============================================================
+   PORTFOLIO — GLANCE CIRCLES WITH IMAGES
+   ============================================================ */
+.pf-glance__circles .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(0,0,0,0.08);
+}
+
+.pf-glance__circles .circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   PORTFOLIO — GUIDE CARD IMAGES
+   ============================================================ */
+.pf-guide-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* ============================================================
+   INDUSTRIES — MOBILE NICHE DIAGRAM FIX
+   ============================================================ */
+@media (max-width: 768px) {
+  .niche-diagram {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .niche-diagram__pill {
+    min-width: 600px;
+  }
+  .niche-item--left .niche-item__box,
+  .niche-item--right .niche-item__box {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
+
+/* ============================================================
+   GENERAL — BUTTON CONSISTENCY
+   ============================================================ */
+.btn--ghost-dark {
+  background: transparent;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.btn--ghost-dark:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
 

@@ -10,7 +10,7 @@ export default function Footer() {
           </Link>
           <nav className="footer__links" aria-label="Footer">
             <Link href="/knowledge-centre">Knowledge Centre</Link>
-            <Link href="/industries">Industries</Link>
+            <Link href="/services">Services</Link>
             <Link href="/portfolio">Portfolio</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/privacy">Privacy Policy</Link>

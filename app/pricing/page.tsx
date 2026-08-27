@@ -295,20 +295,25 @@ export default function PricingPage() {
       </section>
 
       {/* 8. TRUST CTA */}
-      <section className="trust-cta dark reveal" style={{ paddingBlock: '100px', backgroundColor: '#111727', margin: '40px 0', borderRadius: '24px' }}>
-        <div className="wrap trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-          <div className="trust-cta__content">
-            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
-              Doesn't Feel Like<br/><span style={{ color: 'rgba(255,255,255,0.4)' }}>Trusting Us?</span>
+      <section className="trust-cta reveal wrap" style={{ margin: '80px auto' }}>
+        <div className="trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', backgroundColor: '#111727', borderRadius: '32px', overflow: 'hidden' }}>
+          
+          <div className="trust-cta__content" style={{ padding: '80px 60px' }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.2rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px', color: '#fff' }}>
+              Doesn't Feel Like<br/><span style={{ color: 'rgba(255,255,255,0.5)' }}>Trusting Us?</span>
             </h2>
-            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: '400px' }}>
+            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: '400px', margin: 0 }}>
               We're here with a clear intent — to build on trust, deliver the right service, and always put your needs first.
             </p>
           </div>
-          <div className="trust-cta__buttons" style={{ display: 'flex', gap: '16px', alignItems: 'center', justifyContent: 'flex-end' }}>
-            <Link href="#inquiry" className="btn btn--cyan btn--lg">BOOK A SHOOT NOW</Link>
-            <Link href="#inquiry" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}>BULK QUOTES</Link>
+
+          <div className="trust-cta__right" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#162032', borderRadius: '48px 0 0 48px', padding: '40px' }}>
+            <div className="trust-cta__buttons" style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <Link href="#inquiry" className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '16px 32px' }}>BOOK A SHOOT NOW</Link>
+              <Link href="#inquiry" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff', borderRadius: '999px', padding: '16px 32px' }}>BULK QUOTES</Link>
+            </div>
           </div>
+          
         </div>
       </section>
 

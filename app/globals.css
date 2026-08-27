@@ -337,27 +337,26 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 
 /* Dark static full-width nav */
 .nav.is-dark-static {
-  position: absolute;
   padding: 0;
   background: transparent;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.nav.is-dark-static .nav__pill {
+.nav.is-dark-static:not(.is-stuck) .nav__pill {
   max-width: 100%;
   padding: 1.2rem clamp(20px, 4vw, 40px);
   background: transparent;
   border: none;
   box-shadow: none;
 }
-.nav.is-dark-static .nav__links a, .nav.is-dark-static .nav__dropdown-trigger { color: #fff; }
-.nav.is-dark-static .nav__links a:hover, .nav.is-dark-static .nav__dropdown-trigger:hover { color: var(--hero-blue); }
-.nav.is-dark-static .nav__tc { color: rgba(255,255,255,0.7); }
-.nav.is-dark-static .brand__logo { filter: none; }
-.nav.is-dark-static .nav__burger { border-color: rgba(255,255,255,.2); }
-.nav.is-dark-static .nav__burger span,
-.nav.is-dark-static .nav__burger span::before,
-.nav.is-dark-static .nav__burger span::after { background: #fff; }
-.nav.is-dark-static .btn--cyan { background: var(--void); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+.nav.is-dark-static:not(.is-stuck) .nav__links a, .nav.is-dark-static:not(.is-stuck) .nav__dropdown-trigger { color: #fff; }
+.nav.is-dark-static:not(.is-stuck) .nav__links a:hover, .nav.is-dark-static:not(.is-stuck) .nav__dropdown-trigger:hover { color: var(--hero-blue); }
+.nav.is-dark-static:not(.is-stuck) .nav__tc { color: rgba(255,255,255,0.7); }
+.nav.is-dark-static:not(.is-stuck) .brand__logo { filter: none; }
+.nav.is-dark-static:not(.is-stuck) .nav__burger { border-color: rgba(255,255,255,.2); }
+.nav.is-dark-static:not(.is-stuck) .nav__burger span,
+.nav.is-dark-static:not(.is-stuck) .nav__burger span::before,
+.nav.is-dark-static:not(.is-stuck) .nav__burger span::after { background: #fff; }
+.nav.is-dark-static:not(.is-stuck) .btn--cyan { background: var(--void); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
 /* scrubber / recording timeline progress */
 .scrubber{position:fixed;top:0;left:0;height:3px;width:0;z-index:101;
   background:linear-gradient(90deg,var(--cyan),var(--cyan-bright));
@@ -668,7 +667,9 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .footer__copy{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:rgba(255,255,255,.5);padding-block:22px}
 .wordmark{background:transparent;text-align:center;padding-block:10px 0;overflow:hidden}
-.wordmark b{font-family:var(--serif);font-weight:400;color:rgba(255,255,255,0.04);
+.wordmark b{font-family:var(--serif);font-weight:400;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   font-size:clamp(6rem,26vw,26rem);line-height:.8;letter-spacing:0.3em;display:block;margin-left:0.3em}
 .wordmark small{display:none}
 

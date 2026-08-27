@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [heroTc, setHeroTc] = useState('00:00:00:00');
@@ -103,8 +104,7 @@ export default function Home() {
               </h1>
               <p className="hero__sub">Discover talented photographers and videographers for weddings, parties, corporate events, celebrations, concerts and more.</p>
               <div className="hero__cta">
-                <a href="#find" className="btn btn--blue btn--lg">Find a Cameraman &rarr;</a>
-                <a href="#join" className="btn btn--ghost btn--lg">Join as Cameraman</a>
+                <Link href="/book" className="btn btn--blue btn--lg">Book a Shoot &rarr;</Link>
               </div>
             </div>
             
@@ -284,8 +284,8 @@ export default function Home() {
         {/* INDUSTRIES */}
         <section className="section wrap" id="industries">
           <div className="head">
-            <span className="eyebrow">Industries</span>
-            <h2 className="h-section reveal">Industries We Serve</h2>
+            <span className="eyebrow">Services</span>
+            <h2 className="h-section reveal">Services We Provide</h2>
             <p className="lead-txt reveal d1">Deep expertise, translated into the unique visual language of your business.</p>
           </div>
           <div className="ind">
@@ -340,8 +340,9 @@ export default function Home() {
             <figure className="pf reveal d1"><img className="shot" src="/images/hero_poster.jpg" alt="Frame from a recent brand film"/><figcaption className="pf__cap">STILL 06 · f/5.6</figcaption></figure>
             <div className="portfolio__more reveal d2">
               <h3>Wanna See More ???</h3>
-              <a href="#" className="btn btn--coral btn--lg">Check Out Our Portfolio
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <Link href="/portfolio" className="btn btn--coral btn--lg">Check Out Our Portfolio
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
             </div>
           </div>
         </section>
@@ -415,8 +416,8 @@ export default function Home() {
           <h2 className="reveal">Ready to Capture<br/><span className="u-gold u-italic">Precision?</span></h2>
           <p className="reveal d1">Join 500+ brands using CAAS to produce high-end content at scale. No arguments, no complicated quotes — just results.</p>
           <div className="final__row reveal d2">
-            <a href="#pricing" className="btn btn--dark btn--lg">Get Started</a>
-            <a href="#pricing" className="btn btn--ghost btn--lg">View Pricing</a>
+            <Link href="/book" className="btn btn--dark btn--lg">Get Started</Link>
+            <Link href="/pricing" className="btn btn--ghost btn--lg">View Pricing</Link>
           </div>
           <p className="final__small reveal d3">Available across 12 cities · Book in under 60 seconds</p>
         </section>

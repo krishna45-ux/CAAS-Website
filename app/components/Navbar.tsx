@@ -29,18 +29,20 @@ export default function Navbar() {
   const isHomePage = pathname === '/';
   const isStatic = !isHomePage;
   // If static, we don't need 'is-light' logic for pill, but keeping it won't hurt.
-  const isLightPage = pathname === '/pricing' || pathname === '/knowledge-centre' || pathname === '/portfolio' || pathname === '/industries';
+  const isLightPage = pathname === '/pricing' || pathname === '/knowledge-centre' || pathname === '/portfolio' || pathname === '/services';
+
+  const isDarkStatic = pathname === '/book' || pathname === '/contact';
 
   return (
     <>
       <div className="scrubber" id="scrubber" style={{ width: scrubberWidth, display: isStatic ? 'none' : 'block' }}></div>
-      <header className={`nav ${isNavStuck ? 'is-stuck' : ''} ${isNavOpen ? 'is-open' : ''} ${isLightPage && !isStatic ? 'is-light' : ''} ${isStatic ? 'is-static' : ''}`} id="nav">
+      <header className={`nav ${isNavStuck ? 'is-stuck' : ''} ${isNavOpen ? 'is-open' : ''} ${isLightPage && !isStatic ? 'is-light' : ''} ${isDarkStatic ? 'is-dark-static' : isStatic ? 'is-static' : ''}`} id="nav">
         <div className="nav__pill">
           <Link href="/" className="brand" aria-label="CAAS — home" onClick={() => setIsNavOpen(false)}>
             <img src="/images/nav_logo.png" className="brand__logo" alt="" width="776" height="236" />
           </Link>
           <nav className="nav__links" aria-label="Primary">
-            <Link href="/industries" onClick={() => setIsNavOpen(false)}>Industries</Link>
+            <Link href="/services" onClick={() => setIsNavOpen(false)}>Services</Link>
             <Link href="/portfolio" onClick={() => setIsNavOpen(false)}>Portfolio</Link>
             <Link href="/pricing" onClick={() => setIsNavOpen(false)}>Pricing</Link>
             <Link href="/knowledge-centre" onClick={() => setIsNavOpen(false)}>Knowledge Centre</Link>
@@ -49,7 +51,7 @@ export default function Navbar() {
                 More <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginLeft: '4px' }}><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
               <div className="nav__dropdown-menu">
-                <Link href="#" onClick={() => setIsNavOpen(false)}>Blog</Link>
+                <Link href="/blog" onClick={() => setIsNavOpen(false)}>Blog</Link>
               </div>
             </div>
             <Link href="/book" className="btn btn--cyan mobile-only" onClick={() => setIsNavOpen(false)}>Book a Shoot</Link>
