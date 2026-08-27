@@ -2240,3 +2240,184 @@
 }
 
 
+/* ============================================================
+   MOBILE RESPONSIVENESS FIXES
+   ============================================================ */
+@media (max-width: 960px) {
+  /* Box sizing fixes to prevent horizontal overflow */
+  .bento-card, .comparison-card {
+    box-sizing: border-box !important;
+  }
+  .bento-card--wide .bento-card__content, .bento-card--wide .bento-card__img {
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  
+  /* Services Bento spacing */
+  .bento-card__check-list {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .bento-card--wide .bento-card__content {
+    padding: 32px 24px !important;
+  }
+  .bento-card__ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .bento-card__ctas .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Comparison Cards spacing */
+  .comparison-card {
+    padding: 24px !important;
+  }
+
+  /* Services Hero (from earlier) */
+  .services-hero__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .services-cta__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px;
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+  }
+  .services-cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-cta__buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Portfolio Pricing Card (from earlier) */
+  .pf-price-card { padding: 24px !important; }
+  .pf-features-grid { grid-template-columns: 1fr !important; gap: 16px; margin: 32px 0; }
+  .pf-features-grid .f-icon { width: 48px; height: 48px; font-size: 1.5rem; }
+  .pf-concept__right h2 { font-size: 2.2rem; }
+  .pf-concept__ctas { flex-direction: column; }
+}
+
+@media (max-width: 992px) {
+  /* Contact Hero (from earlier) */
+  .contact-hero { padding-top: 120px !important; }
+  .contact-hero__inner { grid-template-columns: 1fr !important; gap: 24px; }
+  .contact-hero__content { padding: 0 !important; }
+  .contact-hero__bg { position: relative !important; width: 100% !important; height: 350px !important; right: auto !important; left: auto !important; top: auto !important; bottom: auto !important; border-radius: 16px !important; margin-top: 24px !important; }
+}
+
+@media (max-width: 960px) {
+  /* Fix navbar More dropdown text color on mobile menu */
+  .nav.is-open .nav__dropdown-trigger {
+    color: #fff !important;
+  }
+  
+  /* Fix buttons overflowing in Portfolio CTA */
+  .pf-surf__ctas {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .pf-surf__ctas .btn {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px) {
+  /* Fix dropdown overlap on mobile */
+  .nav.is-open .nav__dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    margin-top: 12px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+  }
+  .nav.is-open .nav__dropdown-menu a {
+    color: #fff !important;
+    padding: 8px 0 !important;
+  }
+  
+  /* Force Bento cards to span full width and center */
+  .bento-card--large, .bento-card--small, .bento-card--wide {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .expertise-bento {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+/* --- COMPREHENSIVE MOBILE RESPONSIVENESS FIXES --- */
+@media (max-width: 960px) {
+  /* Containers */
+  .wrap { padding-left: 16px !important; padding-right: 16px !important; width: 100% !important; overflow: hidden !important; }
+  
+  /* Generic Grids */
+  .services-grid, .shoot-grid, .pricing-grid, .blog-grid, .kc-grid, .faq-grid, .team-grid, .features-grid, .social-proof__testimonials, .contact-layout, .comparison-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Hero Sections */
+  .hero__inner, .contact-hero__inner, .services-hero__inner, .pf-hero__inner {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+  .hero__content, .contact-hero__content, .services-hero__content, .pf-hero__content {
+    align-items: center !important;
+    padding: 0 !important;
+  }
+  
+  /* Specific UI Components */
+  .kc-newsletter__inner { flex-direction: column !important; text-align: center !important; gap: 24px !important; }
+  .kc-newsletter__form { flex-direction: column !important; width: 100% !important; }
+  .kc-newsletter__form input, .kc-newsletter__form button { width: 100% !important; }
+  
+  .legal-layout { display: flex !important; flex-direction: column !important; }
+  
+  /* Portfolio */
+  .portfolio-gallery { grid-template-columns: 1fr !important; }
+  .pf-concept__right h2 { font-size: 1.8rem !important; }
+  
+  /* Forms */
+  .auth-card { padding: 24px 16px !important; width: 100% !important; }
+  .contact-form { padding: 24px !important; }
+  
+  /* Navigation (Redundant but safe) */
+  .nav.is-open .nav__dropdown-menu {
+    position: static !important; transform: none !important; margin-top: 12px !important;
+    background: transparent !important; box-shadow: none !important; padding: 0 !important; min-width: 0 !important;
+  }
+  .nav.is-open .nav__dropdown-menu a { color: #fff !important; padding: 8px 0 !important; }
+  
+  /* Bento Cards */
+  .bento-card--large, .bento-card--small, .bento-card--wide {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .expertise-bento {
+    display: flex !important; flex-direction: column !important; align-items: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .clients__grid { grid-template-columns: 1fr !important; }
+  .gallery-grid { grid-template-columns: 1fr !important; }
+  .social-proof__stats { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .stats-grid { grid-template-columns: 1fr !important; }
+  .hero h1 { font-size: 2.5rem !important; }
+  .h-section { font-size: 2rem !important; }
+}

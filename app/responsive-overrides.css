@@ -1,0 +1,215 @@
+/* ============================================================
+   GLOBAL MOBILE RESPONSIVENESS OVERRIDES
+   ============================================================ */
+
+/* Base Layout and Container Adjustments */
+@media (max-width: 900px) {
+  .wrap {
+    padding-inline: 16px !important;
+  }
+  .section {
+    padding-block: 48px !important;
+  }
+
+  /* Fix empty space below "More" in the navbar dropdown */
+  .nav__dropdown-menu {
+    display: none !important;
+  }
+  
+  .nav__dropdown-menu.is-open {
+    display: block !important;
+    pointer-events: auto !important;
+    animation: fadeInDown 0.3s ease forwards;
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Make sure all grids stack on mobile unless otherwise specified */
+  .stats-grid,
+  .bento-grid,
+  .pf-hero__inner,
+  .pf-niche-grid,
+  .pf-niche-list,
+  .pf-concept__grid,
+  .pf-features-grid,
+  .pf-guide-cards,
+  .pf-icon-boxes,
+  .bottleneck__grid,
+  .booking__grid,
+  .gear__grid,
+  .ind-row,
+  .portfolio__grid,
+  .contact-cards,
+  .base-card,
+  .addons-grid,
+  .inquiry-grid,
+  .form-row,
+  .trust-cta__inner {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Flex layouts that should stack */
+  .footer__top,
+  .services-hero__inner,
+  .pf-expertise__head,
+  .pf-glance,
+  .hero__features,
+  .pricing-intro__inner,
+  .contact-cards,
+  .base-card__left,
+  .base-card__right,
+  .inquiry-sidebar {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .footer__top,
+  .services-hero__inner,
+  .pricing-intro__inner,
+  .contact-cards {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero__features {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .feature {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 16px !important;
+  }
+  
+  .feature b {
+    font-size: 1rem !important;
+  }
+  
+  .feature p {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+  }
+  
+  .feature__icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .pf-expertise__head {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Typography Scaling */
+  h1, .hero__title, .pf-hero__title, .pf-big-footer h1 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+  h2, .h-section, .pf-niche__headline, .pf-curve__title, .pf-surf h2 {
+    font-size: clamp(1.8rem, 6vw, 2.2rem) !important;
+  }
+  .lead-txt, .hero__sub, .pf-hero__sub, .pf-concept__header p, .pf-surf p {
+    font-size: 1rem !important;
+  }
+
+  /* Button Overrides */
+  .hero__cta,
+  .hero__ctas,
+  .services-cta__buttons,
+  .pf-concept__ctas,
+  .pf-surf__ctas,
+  .pricing-intro__ctas,
+  .trust-cta__buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Specific Component Fixes */
+  .pf-hero {
+    padding-top: 100px !important;
+  }
+  
+  .pf-stats {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+  }
+
+  .pf-avatar-card {
+    margin-bottom: 16px !important;
+  }
+
+  /* Force bento cards and standard cards to stretch full width */
+  .bento-card, .pf-price-card, .pf-guide-card, .pf-niche-card, .stat-card,
+  .base-card, .addon-card, .inquiry-form-card, .contact-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .base-card__left, .base-card__right, .inquiry-form-card, .contact-card {
+    padding: 24px 20px !important;
+  }
+  
+  .addon-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  
+  .addon-card__header {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .trust-cta__inner {
+    border-radius: 24px !important;
+  }
+  
+  .trust-cta__content, .trust-cta__right {
+    padding: 32px 24px !important;
+    border-radius: 0 !important;
+  }
+
+  .quote-box {
+    transform: none !important;
+    max-width: 100% !important;
+    margin-top: 24px !important;
+  }
+  
+  .pricing-intro__quote-wrap {
+    width: 100% !important;
+  }
+
+  .bento-card--large, .bento-card--small, .bento-card--wide {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 2rem !important;
+  }
+  .h-section {
+    font-size: 1.6rem !important;
+  }
+  .section {
+    padding-block: 40px !important;
+  }
+  .pf-big-footer h1 {
+    font-size: 4rem !important;
+  }
+}

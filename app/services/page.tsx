@@ -583,23 +583,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      {/* 10. FINAL CTA */}
-      <section className="services-final-cta page-section">
-        <div className="wrap services-final-cta__inner">
-          <div className="services-final-cta__content reveal">
-            <span className="eyebrow eyebrow--cyan">LET'S TALK</span>
-            <h2 className="h-section" style={{ marginTop: '12px' }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h2>
-            <p>Whether it's a single product shoot or a multi-day campaign, our project managers are ready to build your custom production package.</p>
-            <div className="services-final-cta__btns">
-              <Link href="/contact" className="btn btn--cyan btn--lg">Request a Custom Quote</Link>
-              <Link href="/contact" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>Schedule Consultation</Link>
-            </div>
-          </div>
-          <div className="services-final-cta__img reveal d1">
-            <img src="/images/hero_cinematic.jpg" alt="Cameraman on set" />
-          </div>
-        </div>
-      </section>
 
     </main>
   );
