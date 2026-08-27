@@ -248,7 +248,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="bento-card__img">
-              <Image src="/images/hero_cinematic.jpg" alt="Agencies" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/home_corporate.jpg" alt="Agencies" fill style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </div>

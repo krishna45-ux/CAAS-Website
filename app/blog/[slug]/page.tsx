@@ -29,7 +29,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       {/* ARTICLE FEATURED IMAGE */}
       <div className="wrap">
         <div className="article-featured-img">
-          <img src="/images/blog_corporate.jpg" alt="Featured image" />
+          <img src="/images/blog_thumb_1.jpg" alt="Featured image" />
         </div>
       </div>
 
@@ -73,7 +73,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           
           <article className="blog-card reveal">
             <Link href={`/blog/best-cinema-cameras-2026`} className="blog-card__pic">
-              <img src="/images/professional_lens.jpg" alt="Post" />
+              <img src="/images/blog_thumb_2.jpg" alt="Post" />
               <span className="blog-card__cat">Gear</span>
             </Link>
             <div className="blog-card__body">
@@ -85,7 +85,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
           <article className="blog-card reveal d1">
             <Link href={`/blog/lighting-for-real-estate`} className="blog-card__pic">
-              <img src="/images/blog_lighting.jpg" alt="Post" />
+              <img src="/images/blog_thumb_3.jpg" alt="Post" />
               <span className="blog-card__cat">Tips</span>
             </Link>
             <div className="blog-card__body">

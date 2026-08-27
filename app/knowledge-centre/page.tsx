@@ -36,7 +36,7 @@ export default function KnowledgeCentrePage() {
               <h3 className="kc-hub-card__title" style={{color: '#00d2ff'}}>Blogs</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
-                <img src="/images/blog_corporate.jpg" alt="Blogs" />
+                <img src="/images/blog1.jpg" alt="Blogs" />
               </div>
             </div>
             {/* Shoot Guide */}
@@ -44,7 +44,7 @@ export default function KnowledgeCentrePage() {
               <h3 className="kc-hub-card__title">Shoot Guide</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
-                <img src="/images/blog_corporate.jpg" alt="Shoot Guide" />
+                <img src="/images/shoot_guide.jpg" alt="Shoot Guide" />
               </div>
             </div>
             {/* Latest News */}
@@ -52,7 +52,7 @@ export default function KnowledgeCentrePage() {
               <h3 className="kc-hub-card__title" style={{color: '#00d2ff'}}>Latest News</h3>
               <p className="kc-hub-card__text">"Just finished a 14-hour factory shoot. The client was shocked we got the drone shots while they were on lunch. Efficiency is everything."</p>
               <div className="kc-hub-card__img">
-                <img src="/images/blog_corporate.jpg" alt="Latest News" />
+                <img src="/images/news.jpg" alt="Latest News" />
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function KnowledgeCentrePage() {
           <div className="kc-discover__grid">
             <div className="kc-discover-main reveal">
               <div className="kc-discover-main__img">
-                <img src="/images/blog_corporate.jpg" alt="New Economic Era" />
+                <img src="/images/economic.jpg" alt="New Economic Era" />
               </div>
               <div className="kc-discover-main__content">
                 <h3>New Economic Era</h3>
@@ -80,7 +80,7 @@ export default function KnowledgeCentrePage() {
             <div className="kc-discover-side reveal d1">
               <div className="kc-discover-item">
                 <div className="kc-discover-item__img">
-                  <img src="/images/blog_corporate.jpg" alt="Managing Workforce" />
+                  <img src="/images/workforce.jpg" alt="Managing Workforce" />
                 </div>
                 <div className="kc-discover-item__content kc-discover-item__content--dark">
                   <h4>Managing Workforce</h4>
@@ -93,7 +93,7 @@ export default function KnowledgeCentrePage() {
               </div>
               <div className="kc-discover-item">
                 <div className="kc-discover-item__img">
-                  <img src="/images/blog_corporate.jpg" alt="Women as Entrepreneurs" />
+                  <img src="/images/women_entrepreneurs.jpg" alt="Women as Entrepreneurs" />
                 </div>
                 <div className="kc-discover-item__content">
                   <h4>Women as Entrepreneurs</h4>
@@ -106,7 +106,7 @@ export default function KnowledgeCentrePage() {
               </div>
               <div className="kc-discover-item">
                 <div className="kc-discover-item__img">
-                  <img src="/images/blog_corporate.jpg" alt="Get Users Hooked On Your Product" />
+                  <img src="/images/product_hook.jpg" alt="Get Users Hooked On Your Product" />
                 </div>
                 <div className="kc-discover-item__content kc-discover-item__content--dark">
                   <h4>Get Users Hooked On Your Product</h4>
@@ -135,7 +135,7 @@ export default function KnowledgeCentrePage() {
           </div>
           <div className="kc-industries__right">
             <div className="kc-case-study">
-              <img src="/images/blog_corporate.jpg" alt="Restaurant" />
+              <img src="/images/kc_restaurant.jpg" alt="Restaurant" />
               <div className="kc-case-study__info">
                 <div className="kc-case-study__meta">
                   <span className="u-cyan">RESTAURANT</span> • ARTISAN KITCHENS
@@ -145,7 +145,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             <div className="kc-case-study">
-              <img src="/images/blog_corporate.jpg" alt="Corporate" />
+              <img src="/images/kc_corporate.jpg" alt="Corporate" />
               <div className="kc-case-study__info">
                 <div className="kc-case-study__meta">
                   <span className="u-cyan">CORPORATE</span> • GLOBAL TECH HUB
@@ -155,7 +155,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             <div className="kc-case-study">
-              <img src="/images/blog_corporate.jpg" alt="Real Estate" />
+              <img src="/images/kc_real_estate.jpg" alt="Real Estate" />
               <div className="kc-case-study__info">
                 <div className="kc-case-study__meta">
                   <span className="u-cyan">REAL ESTATE</span> • APEX LIVING
@@ -177,7 +177,7 @@ export default function KnowledgeCentrePage() {
               <span className="kc-feedback__label">CUSTOMER REVIEWS</span>
               <p className="kc-feedback__quote">I had a great experience with the service pet care. They were very professional and attentive to my pet's needs.</p>
               <div className="kc-feedback__author">
-                <div className="kc-feedback__avatar"><img src="/images/storyteller.jpg" alt="Andrea Sanchez" /></div>
+                <div className="kc-feedback__avatar"><img src="/images/avatar_andrea.jpg" alt="Andrea Sanchez" /></div>
                 <div>
                   <strong>Andrea Sanchez</strong>
                   <div className="kc-feedback__stars">⭐⭐⭐⭐⭐</div>
@@ -189,7 +189,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             <div className="kc-feedback__right">
-              <img src="/images/hero_poster.jpg" alt="Happy dog" />
+              <img src="/images/happy_dog.jpg" alt="Happy dog" />
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function KnowledgeCentrePage() {
           <h2 className="kc-section-title reveal">Must Read <span className="u-cyan" style={{fontStyle:'italic'}}>Featured Posts</span></h2>
           <div className="kc-posts-grid">
             <div className="kc-post-card reveal">
-              <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="New Era" /></div>
+              <div className="kc-post-card__img"><img src="/images/new_era.jpg" alt="New Era" /></div>
               <div className="kc-post-card__content">
                 <h3>New Era</h3>
                 <p>Embrace the dawn of a new economic era with fresh opportunities and challenges.</p>
@@ -212,7 +212,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             <div className="kc-post-card kc-post-card--dark reveal d1">
-              <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="Negotiation skill" /></div>
+              <div className="kc-post-card__img"><img src="/images/negotiation.jpg" alt="Negotiation skill" /></div>
               <div className="kc-post-card__content">
                 <h3>Negotiation skill</h3>
                 <p>In order to achieve a desirable outcome, it may be useful to follow a structured approach to negotiation.</p>
@@ -223,7 +223,7 @@ export default function KnowledgeCentrePage() {
               </div>
             </div>
             <div className="kc-post-card reveal d2">
-              <div className="kc-post-card__img"><img src="/images/blog_corporate.jpg" alt="Money" /></div>
+              <div className="kc-post-card__img"><img src="/images/money.jpg" alt="Money" /></div>
               <div className="kc-post-card__content">
                 <h3>Money</h3>
                 <p>Before the development of a medium of exchange—that is, money—people would barter to obtain the goods...</p>

@@ -8,7 +8,7 @@ export default function BlogPage() {
       excerpt: 'Getting your executives and employees comfortable on camera is half the battle. Here are 5 ways to prepare your team.',
       date: 'Aug 14, 2026',
       category: 'Tips',
-      img: '/images/blog_corporate.jpg'
+      img: '/images/blog_thumb_1.jpg'
     },
     {
       slug: 'best-cinema-cameras-2026',
@@ -16,7 +16,7 @@ export default function BlogPage() {
       excerpt: 'From RED Komodo to Sony FX6, we break down the most versatile A-cams our crews are using on set this year.',
       date: 'Aug 02, 2026',
       category: 'Gear',
-      img: '/images/professional_lens.jpg'
+      img: '/images/blog_thumb_2.jpg'
     },
     {
       slug: 'lighting-for-real-estate',
@@ -24,7 +24,7 @@ export default function BlogPage() {
       excerpt: 'Why shooting at the right time of day matters more than having the biggest lighting rig for property videos.',
       date: 'Jul 28, 2026',
       category: 'Behind the Scenes',
-      img: '/images/blog_lighting.jpg'
+      img: '/images/blog_thumb_3.jpg'
     },
     {
       slug: 'why-hire-professional-cameraman',
@@ -32,7 +32,7 @@ export default function BlogPage() {
       excerpt: 'Smartphones are great, but there is a distinct line between consumer content and professional brand perception. Heres why.',
       date: 'Jul 15, 2026',
       category: 'Industry',
-      img: '/images/storyteller.jpg'
+      img: '/images/blog_thumb_4.jpg'
     },
     {
       slug: 'event-coverage-checklist',
@@ -40,7 +40,7 @@ export default function BlogPage() {
       excerpt: 'Don\'t miss a single crucial moment. This is the exact shot list our crews use when covering large-scale exhibitions.',
       date: 'Jul 04, 2026',
       category: 'Tips',
-      img: '/images/blog_wedding.jpg'
+      img: '/images/blog_thumb_5.jpg'
     },
     {
       slug: 'future-of-cameraman-as-a-service',
@@ -48,7 +48,7 @@ export default function BlogPage() {
       excerpt: 'How CAAS is changing the way brands think about their monthly content pipelines and production budgets.',
       date: 'Jun 22, 2026',
       category: 'Industry',
-      img: '/images/hero_poster.jpg'
+      img: '/images/blog_thumb_6.jpg'
     }
   ];
 

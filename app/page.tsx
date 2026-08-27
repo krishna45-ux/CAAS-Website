@@ -157,11 +157,11 @@ export default function Home() {
             <p className="lead-txt reveal d1">Our crew is ready to deploy across a range of real-world scenarios and environments — no brief too big or too small.</p>
           </div>
           <div className="shoot__grid">
-            <article className="shoot-card reveal d1"><img className="shot" src="/images/storyteller.jpg" alt="Cameraman filming social-media content in a studio"/>
+            <article className="shoot-card reveal d1"><img className="shot" src="/images/home_studio.jpg" alt="Cameraman filming social-media content in a studio"/>
               <div className="shoot-card__caption"><b>Social Media Content</b><span>f/2.0 · 35mm</span></div></article>
-            <article className="shoot-card reveal d2"><img className="shot" src="/images/blog_wedding.jpg" alt="Crew covering an outdoor event"/>
+            <article className="shoot-card reveal d2"><img className="shot" src="/images/home_event.jpg" alt="Crew covering an outdoor event"/>
               <div className="shoot-card__caption"><b>Events &amp; Exhibitions</b><span>f/2.8 · 24mm</span></div></article>
-            <article className="shoot-card reveal d3"><img className="shot" src="/images/blog_corporate.jpg" alt="Corporate team on a real-estate shoot"/>
+            <article className="shoot-card reveal d3"><img className="shot" src="/images/home_corporate.jpg" alt="Corporate team on a real-estate shoot"/>
               <div className="shoot-card__caption"><b>Real Estate &amp; Infra</b><span>f/4.0 · 16mm</span></div></article>
           </div>
         </section>
@@ -187,7 +187,7 @@ export default function Home() {
 
         {/* BOTTLENECK (dark) */}
         <section className="section dark bottleneck">
-          <img className="bottleneck__bg" src="/images/blog_lighting.jpg" alt="" aria-hidden="true"/>
+          <img className="bottleneck__bg" src="/images/home_lighting.jpg" alt="" aria-hidden="true"/>
           <div className="wrap bottleneck__grid">
             <div className="reveal">
               <span className="eyebrow">Content OS</span>
@@ -256,17 +256,17 @@ export default function Home() {
               <article className="story reveal-deal">
                 <div className="story__body"><div className="story__label"><b>Priya · Brand Lead</b><span>ON SET / 01</span></div>
                   <p>"The CAAS crew turned up fully organised — I didn't have to babysit a thing. One shift, full setup, cleanup and capture, handled."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/storyteller.jpg" alt="Priya's brand shoot on set"/></div>
+                <div className="story__pic"><img className="shot" src="/images/home_priya.jpg" alt="Priya's brand shoot on set"/></div>
               </article>
               <article className="story reveal-deal d1">
                 <div className="story__body"><div className="story__label"><b>Arjun · NGO Launch</b><span>ON SET / 02</span></div>
                   <p>"The rig they brought for our launch was insane — RED Komodo, the works. The final cut looks like it belongs on Netflix."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/blog_lighting.jpg" alt="Cinematic lighting on the NGO launch shoot"/></div>
+                <div className="story__pic"><img className="shot" src="/images/home_ngo.jpg" alt="Cinematic lighting on the NGO launch shoot"/></div>
               </article>
               <article className="story reveal-deal d2">
                 <div className="story__body"><div className="story__label"><b>Meera · Real Estate</b><span>ON SET / 03</span></div>
                   <p>"I used to underestimate turnaround. Booked at noon, had the high-res edit the same evening. The result? Priceless."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/blog_wedding.jpg" alt="Real-estate property capture"/></div>
+                <div className="story__pic"><img className="shot" src="/images/kc_real_estate.jpg" alt="Real-estate property capture"/></div>
               </article>
             </div>
           </div>
@@ -295,7 +295,7 @@ export default function Home() {
                 <h3 className="reveal-text-up d1">Brands, Creators &amp; Social Media</h3>
                 <p className="reveal-text-up d2">Built for businesses and individuals who create content consistently and need a crew that keeps up.</p>
               </div>
-              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/storyteller.jpg" alt="Creator filming branded content"/></div>
+              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/home_creator.jpg" alt="Creator filming branded content"/></div>
             </article>
             <article className="ind-row">
               <div className="ind-row__txt">
