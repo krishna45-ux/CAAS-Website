@@ -205,6 +205,17 @@
   .stat-num {
     font-size: 3rem !important;
   }
+
+  /* Services social proof heading */
+  .services-social-proof {
+    padding-top: 32px !important;
+  }
+  .services-social-proof .head {
+    margin-bottom: 24px !important;
+  }
+  .services-social-proof .h-section {
+    font-size: 1.4rem !important;
+  }
 }
 
 /* Extra small devices (phones) */
