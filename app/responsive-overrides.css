@@ -216,6 +216,22 @@
   .services-social-proof .h-section {
     font-size: 1.4rem !important;
   }
+
+  /* Services Hero / Stats fixes */
+  .services-page .services-cta {
+    padding-top: 100px !important; 
+  }
+  .services-cta__stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+  .services-cta__stats strong {
+    font-size: 1.2rem !important;
+  }
+  .services-cta__stats span {
+    font-size: 0.6rem !important;
+    letter-spacing: 0 !important;
+  }
 }
 
 /* Extra small devices (phones) */
