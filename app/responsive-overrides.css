@@ -124,7 +124,8 @@
   .pf-concept__ctas,
   .pf-surf__ctas,
   .pricing-intro__ctas,
-  .trust-cta__buttons {
+  .trust-cta__buttons,
+  .social-proof__ctas {
     flex-direction: column !important;
     width: 100% !important;
     align-items: stretch !important;
@@ -195,6 +196,14 @@
 
   .bento-card--large, .bento-card--small, .bento-card--wide {
     grid-column: 1 / -1 !important;
+  }
+
+  /* Social proof stat overrides */
+  .social-proof-block {
+    padding-block: 32px !important;
+  }
+  .stat-num {
+    font-size: 3rem !important;
   }
 }
 

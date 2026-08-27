@@ -44,9 +44,9 @@ export default function Navbar() {
   const isHomePage = pathname === '/';
   const isStatic = !isHomePage;
   // If static, we don't need 'is-light' logic for pill, but keeping it won't hurt.
-  const isLightPage = pathname === '/pricing' || pathname === '/knowledge-centre' || pathname === '/portfolio';
+  const isLightPage = pathname === '/pricing' || pathname === '/knowledge-centre' || pathname === '/portfolio' || pathname === '/services';
 
-  const isDarkStatic = pathname === '/book' || pathname === '/contact' || pathname.startsWith('/blog') || pathname === '/services';
+  const isDarkStatic = pathname === '/book' || pathname === '/contact' || pathname.startsWith('/blog');
 
   return (
     <>
