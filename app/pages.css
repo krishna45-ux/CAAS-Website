@@ -1907,9 +1907,9 @@
 .pf-guide-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 24px; }
 .pf-guide-card.dark { background: var(--ink); color: #fff; }
 .pf-guide-card h3 { font-size: 1.25rem; }
-.pf-guide-card p { font-size: 0.95rem; color: var(--muted); flex: 1; line-height: 1.6; }
+.pf-guide-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
 .pf-guide-card.dark p { color: rgba(255,255,255,0.7); }
-.pf-guide-card img { width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover; }
+.pf-guide-card img { width: 100%; border-radius: 8px; height: auto; }
 
 .pf-glance { display: flex; align-items: center; gap: 40px; }
 .pf-glance__text h3 { font-size: 1.5rem; margin-bottom: 8px; }
